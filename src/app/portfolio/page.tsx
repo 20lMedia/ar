@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
@@ -5,15 +6,15 @@ import { Button } from '@/components/ui/button';
 import { Eye } from 'lucide-react';
 
 const projects = [
-  { id: 1, title: 'The Sky Residence', category: 'Residential', imageUrl: 'https://placehold.co/600x800.png', hint: 'luxury apartment interior' },
-  { id: 2, title: 'Artisan Cafe & Lounge', category: 'Commercial', imageUrl: 'https://placehold.co/600x600.png', hint: 'modern cafe design' },
-  { id: 3, title: 'Serenity Spa Retreat', category: 'Commercial', imageUrl: 'https://placehold.co/600x700.png', hint: 'spa interior design' },
-  { id: 4, title: 'Lakeside Manor', category: 'Residential', imageUrl: 'https://placehold.co/600x850.png', hint: 'classic luxury home' },
-  { id: 5, title: 'Boutique Hotel Lobby', category: 'Commercial', imageUrl: 'https://placehold.co/600x650.png', hint: 'hotel lobby design' },
-  { id: 6, title: 'Urban Loft Conversion', category: 'Residential', imageUrl: 'https://placehold.co/600x750.png', hint: 'industrial loft interior' },
-  { id: 7, title: 'Executive Office Suite', category: 'Commercial', imageUrl: 'https://placehold.co/600x550.png', hint: 'modern office design' },
-  { id: 8, title: 'Vineyard Estate', category: 'Residential', imageUrl: 'https://placehold.co/600x900.png', hint: 'rustic luxury house' },
-  { id: 9, title: 'Gallery Space', category: 'Commercial', imageUrl: 'https://placehold.co/600x500.png', hint: 'art gallery minimalist' },
+  { id: 1, title: 'The Sky Residence', category: 'Residential', imageUrl: 'https://source.unsplash.com/random/600x800/?luxury+apartment', imageHeight: 800 },
+  { id: 2, title: 'Artisan Cafe & Lounge', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x600/?modern+cafe', imageHeight: 600 },
+  { id: 3, title: 'Serenity Spa Retreat', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x700/?spa+interior', imageHeight: 700 },
+  { id: 4, title: 'Lakeside Manor', category: 'Residential', imageUrl: 'https://source.unsplash.com/random/600x850/?classic+home', imageHeight: 850 },
+  { id: 5, title: 'Boutique Hotel Lobby', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x650/?hotel+lobby', imageHeight: 650 },
+  { id: 6, title: 'Urban Loft Conversion', category: 'Residential', imageUrl: 'https://source.unsplash.com/random/600x750/?industrial+loft', imageHeight: 750 },
+  { id: 7, title: 'Executive Office Suite', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x550/?modern+office', imageHeight: 550 },
+  { id: 8, title: 'Vineyard Estate', category: 'Residential', imageUrl: 'https://source.unsplash.com/random/600x900/?rustic+house', imageHeight: 900 },
+  { id: 9, title: 'Gallery Space', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x500/?art+gallery', imageHeight: 500 },
 ];
 
 const PortfolioPage = () => {
@@ -39,9 +40,8 @@ const PortfolioPage = () => {
                   src={project.imageUrl}
                   alt={project.title}
                   width={600}
-                  height={parseInt(project.imageUrl.split('x')[1].split('.')[0], 10)} // extract height for aspect ratio
+                  height={project.imageHeight} 
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                  data-ai-hint={project.hint}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <h3 className="text-2xl font-headline font-semibold text-white mb-1 shadow-text">{project.title}</h3>
