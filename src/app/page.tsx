@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -8,12 +9,11 @@ import { ArrowRight, MoveRight } from 'lucide-react';
 const NewHeroSection = () => (
   <section className="relative min-h-[70vh] md:min-h-[calc(100vh-4rem)] flex flex-col justify-center bg-gray-200">
     <Image
-      src="https://placehold.co/1920x1000.png"
+      src="https://source.unsplash.com/random/1920x1000/?modern+living"
       alt="Modern interior design"
       layout="fill"
       objectFit="cover"
       className="absolute z-0 opacity-50"
-      data-ai-hint="modern living room minimalist"
       priority
     />
     <div className="relative z-10 container mx-auto px-4 py-16 text-left">
@@ -46,11 +46,11 @@ const ResidentialServicesSection = () => (
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div className="relative aspect-[3/4] group">
-            <Image src="https://placehold.co/600x800.png" alt="Residential Design 1" layout="fill" objectFit="cover" className="rounded-md" data-ai-hint="luxury bedroom design" />
+            <Image src="https://source.unsplash.com/random/600x800/?luxury+bedroom" alt="Residential Design 1" layout="fill" objectFit="cover" className="rounded-md" />
             <div className="absolute bottom-4 left-4 text-2xl font-headline font-bold text-white bg-black/30 p-2 rounded">01</div>
           </div>
           <div className="relative aspect-[3/4] group mt-8">
-            <Image src="https://placehold.co/600x800.png" alt="Residential Design 2" layout="fill" objectFit="cover" className="rounded-md" data-ai-hint="modern kitchen design"/>
+            <Image src="https://source.unsplash.com/random/600x800/?modern+kitchen" alt="Residential Design 2" layout="fill" objectFit="cover" className="rounded-md" />
             <div className="absolute bottom-4 left-4 text-2xl font-headline font-bold text-white bg-black/30 p-2 rounded">02</div>
           </div>
         </div>
@@ -61,10 +61,10 @@ const ResidentialServicesSection = () => (
 
 const YourHomeReflectionSection = () => {
   const services = [
-    { name: 'Commercial Service', image: 'https://placehold.co/400x300.png', hint: 'office workspace design' },
-    { name: 'Retail Shop Design', image: 'https://placehold.co/400x300.png', hint: 'boutique store interior' },
-    { name: 'Home Office', image: 'https://placehold.co/400x300.png', hint: 'stylish home office' },
-    { name: 'Salon Design', image: 'https://placehold.co/400x300.png', hint: 'luxury salon interior' },
+    { name: 'Commercial Service', image: 'https://source.unsplash.com/random/400x300/?office+workspace', hint: 'office workspace design' },
+    { name: 'Retail Shop Design', image: 'https://source.unsplash.com/random/400x300/?boutique+store', hint: 'boutique store interior' },
+    { name: 'Home Office', image: 'https://source.unsplash.com/random/400x300/?stylish+home', hint: 'stylish home office' },
+    { name: 'Salon Design', image: 'https://source.unsplash.com/random/400x300/?luxury+salon', hint: 'luxury salon interior' },
   ];
   return (
     <section className="py-16 md:py-24 bg-secondary text-secondary-foreground">
@@ -79,7 +79,7 @@ const YourHomeReflectionSection = () => {
           {services.map((service) => (
             <Card key={service.name} className="bg-card text-card-foreground overflow-hidden group">
               <div className="relative aspect-video">
-                <Image src={service.image} alt={service.name} layout="fill" objectFit="cover" data-ai-hint={service.hint} />
+                <Image src={service.image} alt={service.name} layout="fill" objectFit="cover" />
               </div>
               <CardContent className="p-4">
                 <h3 className="font-headline text-lg font-semibold">{service.name}</h3>
@@ -112,7 +112,7 @@ const BreathtakingDesignSection = () => (
           </Button>
         </div>
         <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-          <Image src="https://placehold.co/800x600.png" alt="Luxury interior detail" layout="fill" objectFit="cover" data-ai-hint="elegant room detail" />
+          <Image src="https://source.unsplash.com/random/800x600/?elegant+room" alt="Luxury interior detail" layout="fill" objectFit="cover" />
         </div>
       </div>
     </div>
@@ -123,7 +123,7 @@ const FullWidthImageSection = () => (
   <section className="py-16 md:py-24">
     <div className="container mx-auto px-4">
       <div className="relative aspect-[16/7] rounded-lg overflow-hidden">
-        <Image src="https://placehold.co/1600x700.png" alt="Spacious modern living room" layout="fill" objectFit="cover" data-ai-hint="panoramic living room" />
+        <Image src="https://source.unsplash.com/random/1600x700/?panoramic+living" alt="Spacious modern living room" layout="fill" objectFit="cover" />
       </div>
     </div>
   </section>
@@ -174,10 +174,10 @@ const ProjectShowcaseItem = ({
       <h3 className="text-2xl md:text-3xl font-headline font-semibold text-foreground mb-8">{title}</h3>
       <div className="grid md:grid-cols-2 gap-6">
         <div className="relative aspect-[4/3] rounded-md overflow-hidden">
-          <Image src={image1} alt={title + " - view 1"} layout="fill" objectFit="cover" data-ai-hint={image1Hint} />
+          <Image src={image1} alt={title + " - view 1"} layout="fill" objectFit="cover" />
         </div>
         <div className="relative aspect-[4/3] rounded-md overflow-hidden">
-          <Image src={image2} alt={title + " - view 2"} layout="fill" objectFit="cover" data-ai-hint={image2Hint} />
+          <Image src={image2} alt={title + " - view 2"} layout="fill" objectFit="cover" />
         </div>
       </div>
     </div>
@@ -187,12 +187,11 @@ const ProjectShowcaseItem = ({
 const NewsletterSection = () => (
   <section className="relative py-20 md:py-32 bg-gray-300">
     <Image
-      src="https://placehold.co/1920x600.png"
+      src="https://source.unsplash.com/random/1920x600/?subtle+texture"
       alt="Abstract texture background"
       layout="fill"
       objectFit="cover"
       className="absolute z-0 opacity-30"
-      data-ai-hint="subtle texture background"
     />
     <div className="relative z-10 container mx-auto px-4 text-center">
       <h2 className="text-3xl md:text-4xl font-headline font-semibold text-foreground mb-6">Newsletter Subscribe</h2>
@@ -224,18 +223,18 @@ export default function Home() {
         count="01"
         category="Apartment & Interior"
         title="Apartment & Interior Design and fitout"
-        image1="https://placehold.co/800x600.png"
+        image1="https://source.unsplash.com/random/800x600/?modern+apartment"
         image1Hint="modern apartment living"
-        image2="https://placehold.co/800x600.png"
+        image2="https://source.unsplash.com/random/800x600/?apartment+kitchen"
         image2Hint="apartment kitchen detail"
       />
       <ProjectShowcaseItem
         count="02"
         category="Villa Interior"
         title="Villa Interior Design & Fitout"
-        image1="https://placehold.co/800x600.png"
+        image1="https://source.unsplash.com/random/800x600/?luxury+villa"
         image1Hint="luxury villa exterior"
-        image2="https://placehold.co/800x600.png"
+        image2="https://source.unsplash.com/random/800x600/?villa+swimming"
         image2Hint="villa swimming pool"
       />
 
