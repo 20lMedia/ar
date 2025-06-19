@@ -92,29 +92,6 @@ const YourHomeReflectionSection = () => {
   );
 };
 
-const BreathtakingDesignSection = () => (
-  <section className="py-16 md:py-24 bg-secondary text-secondary-foreground">
-    <div className="container mx-auto px-4">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">
-            Breathtaking Interior Design and Fitouts by Elysian City Building Contracting L.L.C
-          </h2>
-          <p className="text-base text-secondary-foreground/80 mb-8">
-            Our exceptional team is the guard that knows the importance of details and ensures that the final result is always flawless. We transform spaces into true works of art, delivering quality and innovation in every project.
-          </p>
-          <Button asChild variant="outline" className="border-accent text-accent hover:bg-accent/10 hover:text-accent">
-            <Link href="/about">Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-          </Button>
-        </div>
-        <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-          <Image src="https://source.unsplash.com/random/800x600/?elegant+room" alt="Luxury interior detail" layout="fill" objectFit="cover" />
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
 const FullWidthImageSection = () => (
   <section className="py-16 md:py-24">
     <div className="container mx-auto px-4">
@@ -207,7 +184,6 @@ export default function Home() {
       <NewHeroSection />
       <ResidentialServicesSection />
       <YourHomeReflectionSection />
-      <BreathtakingDesignSection />
       <FullWidthImageSection />
       <ExploreProjectsSection />
       
