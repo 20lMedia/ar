@@ -1,4 +1,5 @@
 
+"use client";
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useEffect, useState } from 'react';
 
@@ -20,7 +21,7 @@ const PrivacyPolicyPage = () => {
             <p><strong>Last Updated:</strong> {lastUpdated || 'Loading...'}</p>
             
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">1. Introduction</h2>
-            <p>Welcome to Elysian Interiors. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+            <p>Welcome to AR Architecture Design Studio. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
 
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">2. Collection of Your Information</h2>
             <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
@@ -45,10 +46,10 @@ const PrivacyPolicyPage = () => {
 
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">6. Contact Us</h2>
             <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
-            <p>Elysian Interiors<br/>
+            <p>AR Architecture Design Studio<br/>
             1st Floor, AMBAL HARWARES, 58, Santhai Rd<br/>
             Golden Nagar, Mettupatti, Dindigul, Tamil Nadu 624002, India<br/>
-            Email: privacy@elysianinteriors.com<br/>
+            Email: privacy@ararchitecturedesignstudio.com<br/>
             Phone: +91 96261 11223</p>
           </CardContent>
         </Card>

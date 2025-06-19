@@ -22,7 +22,7 @@ const serviceDetailsMap: { [key: string]: any } = {
     slug: 'commercial',
     title: 'High-End Commercial Spaces',
     longDescription: [
-      "Elysian Interiors specializes in designing high-end commercial spaces that elevate brands and enhance customer experiences. We work with boutiques, luxury retail, corporate offices, hotels, and fine dining establishments to create environments that are both impactful and aligned with business objectives.",
+      "AR Architecture Design Studio specializes in designing high-end commercial spaces that elevate brands and enhance customer experiences. We work with boutiques, luxury retail, corporate offices, hotels, and fine dining establishments to create environments that are both impactful and aligned with business objectives.",
       "Our design process considers brand identity, operational flow, customer journey, and employee well-being. We create sophisticated and inviting spaces that leave a lasting impression, fostering engagement and loyalty.",
       "Services include concept development, spatial planning, fixture design, lighting schemes, and full project coordination to ensure timely and on-budget delivery."
     ],

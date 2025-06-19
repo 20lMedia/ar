@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'; // Added CardFooter
 import { Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -19,7 +19,7 @@ const testimonialsData: Testimonial[] = [
     id: 1,
     name: 'Isabella Worthington',
     title: 'Owner, Park Avenue Penthouse',
-    quote: "Elysian Interiors transformed my apartment into a sanctuary of elegance and comfort. Their attention to detail and understanding of my vision was unparalleled. Every day feels like living in a masterpiece.",
+    quote: "AR Architecture Design Studio transformed my apartment into a sanctuary of elegance and comfort. Their attention to detail and understanding of my vision was unparalleled. Every day feels like living in a masterpiece.",
     imageUrl: 'https://placehold.co/100x100.png',
     imageHint: 'elegant woman portrait',
   },
@@ -27,7 +27,7 @@ const testimonialsData: Testimonial[] = [
     id: 2,
     name: 'Julian Sinclair',
     title: 'CEO, Sinclair Holdings',
-    quote: "The team at Elysian Interiors delivered a corporate headquarters that perfectly balances sophistication with functionality. Our clients and employees are consistently impressed. A truly professional and visionary firm.",
+    quote: "The team at AR Architecture Design Studio delivered a corporate headquarters that perfectly balances sophistication with functionality. Our clients and employees are consistently impressed. A truly professional and visionary firm.",
     imageUrl: 'https://placehold.co/100x100.png',
     imageHint: 'professional man portrait',
   },
@@ -35,14 +35,14 @@ const testimonialsData: Testimonial[] = [
     id: 3,
     name: 'Olivia & Thomas Ashworth',
     title: 'Owners, Coastal Estate',
-    quote: "Working with Elysian Interiors was an absolute pleasure. They captured the essence of coastal luxury while making our home feel incredibly personal and inviting. Their creativity knows no bounds.",
+    quote: "Working with AR Architecture Design Studio was an absolute pleasure. They captured the essence of coastal luxury while making our home feel incredibly personal and inviting. Their creativity knows no bounds.",
     // No image for this one to show variability
   },
    {
     id: 4,
     name: 'Chen Rui',
     title: 'Art Collector',
-    quote: "Elysian's ability to integrate my art collection seamlessly into the design was breathtaking. They created spaces that are both a home and a gallery, enhancing each piece's beauty. Exceptional talent.",
+    quote: "AR Architecture Design Studio's ability to integrate my art collection seamlessly into the design was breathtaking. They created spaces that are both a home and a gallery, enhancing each piece's beauty. Exceptional talent.",
     imageUrl: 'https://placehold.co/100x100.png',
     imageHint: 'sophisticated person portrait',
   },
@@ -57,7 +57,7 @@ const TestimonialsPage = () => {
             Words of Acclaim
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
-            Hear from our esteemed clients about their experience with Elysian Interiors.
+            Hear from our esteemed clients about their experience with AR Architecture Design Studio.
           </p>
         </div>
       </header>

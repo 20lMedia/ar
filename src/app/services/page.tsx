@@ -104,7 +104,7 @@ const ServicesPage = () => {
             Ready to Elevate Your Space?
           </h2>
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-            Schedule a discovery call to discuss your project and learn how Elysian Interiors can bring your aspirations to life.
+            Schedule a discovery call to discuss your project and learn how AR Architecture Design Studio can bring your aspirations to life.
           </p>
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
             <Link href="/contact">

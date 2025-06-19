@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Logo />
             <p className="mt-4 text-sm ">
-              Crafting timeless spaces, unveiling your story.
+              Designing innovative architectural and interior solutions.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 shrink-0 text-accent" />
-                <a href="mailto:contact@elysianinteriors.com" className="hover:text-accent transition-colors">contact@elysianinteriors.com</a>
+                <a href="mailto:contact@ararchitecturedesignstudio.com" className="hover:text-accent transition-colors">contact@ararchitecturedesignstudio.com</a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 shrink-0 text-accent" />
@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border/40 pt-8 text-center text-sm">
-          &copy; {currentYear} Elysian Interiors. All rights reserved.
+          &copy; {currentYear} AR Architecture Design Studio. All rights reserved.
           <br />
           <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link> | <Link href="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</Link>
         </div>

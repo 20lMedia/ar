@@ -5,8 +5,8 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
-  title: 'Elysian Interiors - Luxury Interior Design',
-  description: 'Bespoke interior design services for affluent clients.',
+  title: 'AR Architecture Design Studio - Innovative Design Solutions',
+  description: 'AR Architecture Design Studio offers cutting-edge architectural and interior design services.',
 };
 
 export default function RootLayout({

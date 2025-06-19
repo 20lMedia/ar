@@ -13,7 +13,7 @@ const AboutPage = () => {
             Our Story: Designing Dreams into Reality
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
-            Discover the passion, philosophy, and people behind Elysian Interiors.
+            Discover the passion, philosophy, and people behind AR Architecture Design Studio.
           </p>
         </div>
       </header>
@@ -22,12 +22,12 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-headline font-semibold text-primary mb-6">The Elysian Vision</h2>
+              <h2 className="text-3xl font-headline font-semibold text-primary mb-6">The AR Architecture Vision</h2>
               <p className="text-lg text-foreground/80 mb-4 leading-relaxed">
-                Founded on the belief that interior design is a transformative art form, Elysian Interiors has dedicated itself to crafting spaces that are not only aesthetically captivating but also deeply resonant with the lives and aspirations of our clients. We weave narratives through design, creating environments that tell your unique story.
+                Founded on the belief that design is a transformative art form, AR Architecture Design Studio has dedicated itself to crafting spaces that are not only aesthetically captivating but also deeply resonant with the lives and aspirations of our clients. We weave narratives through design, creating environments that tell your unique story.
               </p>
               <p className="text-lg text-foreground/80 mb-4 leading-relaxed">
-                Our approach is collaborative and client-focused. We listen intently, understand profoundly, and then translate your vision into sophisticated, timeless interiors. From grand architectural gestures to the finest bespoke details, every element is thoughtfully considered and impeccably executed.
+                Our approach is collaborative and client-focused. We listen intently, understand profoundly, and then translate your vision into sophisticated, timeless designs. From grand architectural gestures to the finest bespoke details, every element is thoughtfully considered and impeccably executed.
               </p>
               <p className="text-lg text-foreground/80 leading-relaxed">
                 We champion sustainable practices and timeless quality, ensuring that your space is not only beautiful today but cherished for generations to come.
@@ -63,7 +63,7 @@ const AboutPage = () => {
             <div className="md:order-1 rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="https://placehold.co/600x700.png"
-                alt="Founder of Elysian Interiors"
+                alt="Founder of AR Architecture Design Studio"
                 width={600}
                 height={700}
                 className="w-full h-auto object-cover"
@@ -100,7 +100,7 @@ const AboutPage = () => {
               <CardContent>
                 <ul className="list-disc list-inside text-foreground/80 space-y-1">
                   <li>International Design Excellence Award</li>
-                  <li>Luxury Lifestyle Awards - Best Interior Design Studio</li>
+                  <li>Luxury Lifestyle Awards - Best Design Studio</li>
                   <li>Architectural Digest Top 100 Designers</li>
                 </ul>
               </CardContent>

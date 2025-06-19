@@ -16,7 +16,7 @@ const ContactPage = () => {
             Connect With Us
           </h1>
           <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
-            We're here to answer your questions and help you embark on your design journey. Reach out to Elysian Interiors today.
+            We're here to answer your questions and help you embark on your design journey. Reach out to AR Architecture Design Studio today.
           </p>
         </div>
       </header>
@@ -78,8 +78,8 @@ const ContactPage = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-accent shrink-0" />
-                    <Link href="mailto:contact@elysianinteriors.com" className="text-foreground/80 hover:text-primary transition-colors">
-                      contact@elysianinteriors.com
+                    <Link href="mailto:contact@ararchitecturedesignstudio.com" className="text-foreground/80 hover:text-primary transition-colors">
+                      contact@ararchitecturedesignstudio.com
                     </Link>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -97,7 +97,6 @@ const ContactPage = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="aspect-video bg-muted rounded-md flex items-center justify-center">
-                    {/* Replace with an actual map embed if possible, or a static image of the map */}
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.373051016599!2d77.9721026!3d10.3500201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00abbbc1cab045%3A0x9c3583ece4f19b1f!2sAR%20Architecture%20Design%20Studio!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
                         width="100%"

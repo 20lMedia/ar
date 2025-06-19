@@ -19,10 +19,10 @@ const NewHeroSection = () => (
     <div className="relative z-10 container mx-auto px-4 py-16 text-left">
       <div className="max-w-2xl">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-headline font-bold mb-6 text-foreground leading-tight">
-          Elysian Interiors and Solutions
+          AR Architecture Design Studio
         </h1>
         <p className="text-lg text-foreground/80 mb-8">
-          Design is beyond just being you, it reflects your personality, taste and style. At Elysian Interiors we make sure to create a space for you that is truly yours.
+          Design is beyond just being you, it reflects your personality, taste and style. At AR Architecture Design Studio we make sure to create a space for you that is truly yours.
         </p>
         <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md text-base">
           <Link href="/contact">
