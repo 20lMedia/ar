@@ -100,10 +100,6 @@ const BreathtakingDesignSection = () => (
           <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">
             Breathtaking Interior Design and Fitouts by Elysian City Building Contracting L.L.C
           </h2>
-          <div className="flex space-x-8 mb-8">
-            <div className="w-24 h-24 border-2 border-accent rounded-full flex items-center justify-center text-accent font-semibold text-sm">Design</div>
-            <div className="w-24 h-24 border-2 border-accent rounded-full flex items-center justify-center text-accent font-semibold text-sm">Fitout</div>
-          </div>
           <p className="text-base text-secondary-foreground/80 mb-8">
             Our exceptional team is the guard that knows the importance of details and ensures that the final result is always flawless. We transform spaces into true works of art, delivering quality and innovation in every project.
           </p>
@@ -149,18 +145,14 @@ const ProjectShowcaseItem = ({
   category,
   title,
   image1,
-  image1Hint,
   image2,
-  image2Hint,
   href = "/portfolio"
 }: {
   count: string;
   category: string;
   title: string;
   image1: string;
-  image1Hint: string;
   image2: string;
-  image2Hint: string;
   href?: string;
 }) => (
   <div className="py-12 border-b border-border last:border-b-0">
@@ -224,18 +216,14 @@ export default function Home() {
         category="Apartment & Interior"
         title="Apartment & Interior Design and fitout"
         image1="https://source.unsplash.com/random/800x600/?modern+apartment"
-        image1Hint="modern apartment living"
         image2="https://source.unsplash.com/random/800x600/?apartment+kitchen"
-        image2Hint="apartment kitchen detail"
       />
       <ProjectShowcaseItem
         count="02"
         category="Villa Interior"
         title="Villa Interior Design & Fitout"
         image1="https://source.unsplash.com/random/800x600/?luxury+villa"
-        image1Hint="luxury villa exterior"
         image2="https://source.unsplash.com/random/800x600/?villa+swimming"
-        image2Hint="villa swimming pool"
       />
 
       <div className="py-12 text-center bg-background">
