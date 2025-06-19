@@ -4,34 +4,34 @@
 
 @layer base {
   :root {
-    --background: 216 28% 95%; /* Light gray #F0F2F5 */
-    --foreground: 210 10% 23%; /* Deep charcoal */
+    --background: 40 33% 97%; /* Very light beige #FBF9F4 */
+    --foreground: 210 10% 15%; /* Very dark gray #212529 */
 
-    --muted: 210 40% 90%; 
+    --muted: 210 30% 92%; /* Light muted gray */
     --muted-foreground: 210 10% 45%; 
 
     --popover: 0 0% 100%; 
-    --popover-foreground: 210 10% 23%; 
+    --popover-foreground: 210 10% 15%; 
 
     --card: 0 0% 100%; 
-    --card-foreground: 210 10% 23%; 
+    --card-foreground: 210 10% 15%; 
 
     --border: 210 20% 88%; 
-    --input: 210 20% 92%; 
+    --input: 210 20% 96%; 
 
-    --primary: 209 11% 69%; /* Soft blue-gray #A7B0B7 */
-    --primary-foreground: 0 0% 10%; /* Dark text for primary elements */
+    --primary: 210 10% 15%; /* Very dark gray for primary elements like buttons */
+    --primary-foreground: 40 33% 97%; /* Light text for primary elements */
 
-    --secondary: 210 30% 91%; 
-    --secondary-foreground: 210 10% 23%; 
+    --secondary: 210 10% 10%; /* Almost black for dark sections */
+    --secondary-foreground: 40 33% 97%; /* Light text for dark sections */
 
-    --accent: 43 20% 60%; /* Muted gold #B0A383 */
-    --accent-foreground: 0 0% 10%; /* Dark text for accent elements */
+    --accent: 25 70% 70%; /* Soft terracotta #E8A87C */
+    --accent-foreground: 210 10% 15%; /* Dark text for accent elements */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --ring: 43 20% 60%; /* Muted gold for focus rings */
+    --ring: 25 70% 70%; /* Soft terracotta for focus rings */
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
@@ -44,6 +44,7 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
+    /* Keeping dark mode defaults, can be adjusted later if needed */
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
@@ -85,11 +86,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'PT Sans', sans-serif;
   }
-}
-
-@layer utilities {
-  .shadow-text {
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
   }
 }

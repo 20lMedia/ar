@@ -11,9 +11,9 @@ import type { FC } from 'react';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/portfolio', label: 'Portfolio' }, // Changed from WORK
   { href: '/services', label: 'Services' },
-  { href: '/testimonials', label: 'Testimonials' },
+  { href: '/testimonials', label: 'Testimonials' }, // Changed from NEWS
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -32,8 +32,8 @@ const NavLink: FC<NavLinkProps> = ({ href, label, isMobile = false, onClose }) =
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium transition-colors hover:text-primary",
-        isActive ? "text-primary" : "text-foreground/70",
+        "text-sm font-medium transition-colors hover:text-accent", // Changed hover to accent
+        isActive ? "text-primary font-semibold" : "text-foreground/70", // Keep primary for active, but use accent for hover
         isMobile && "block py-2 text-lg"
       )}
       onClick={onClose}
@@ -54,28 +54,38 @@ const Header = () => {
             <NavLink key={link.href} href={link.href} label={link.label} />
           ))}
         </nav>
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Open navigation menu">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
-              <div className="p-6">
-                <div className="mb-8">
-                  <Logo />
-                </div>
-                <nav className="flex flex-col space-y-4">
-                  {navLinks.map((link) => (
-                     <SheetClose asChild key={link.href}>
-                       <NavLink href={link.href} label={link.label} isMobile />
+        <div className="flex items-center gap-2">
+          <Button asChild variant="outline" size="sm" className="hidden md:inline-flex border-primary text-primary hover:bg-primary/5 hover:text-primary">
+            <Link href="/contact">Get a Quote</Link>
+          </Button>
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" aria-label="Open navigation menu">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
+                <div className="p-6">
+                  <div className="mb-8">
+                    <Logo />
+                  </div>
+                  <nav className="flex flex-col space-y-4">
+                    {navLinks.map((link) => (
+                       <SheetClose asChild key={link.href}>
+                         <NavLink href={link.href} label={link.label} isMobile />
+                       </SheetClose>
+                    ))}
+                     <SheetClose asChild>
+                        <Button asChild variant="default" className="w-full mt-4 bg-primary text-primary-foreground">
+                            <Link href="/contact">Get a Quote</Link>
+                        </Button>
                      </SheetClose>
-                  ))}
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+                  </nav>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
