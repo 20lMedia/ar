@@ -153,30 +153,6 @@ const ProjectShowcaseItem = ({
   </div>
 );
 
-const NewsletterSection = () => (
-  <section className="relative py-20 md:py-32 bg-gray-300">
-    <Image
-      src="https://source.unsplash.com/random/1920x600/?subtle+texture"
-      alt="Abstract texture background"
-      layout="fill"
-      objectFit="cover"
-      className="absolute z-0 opacity-30"
-    />
-    <div className="relative z-10 container mx-auto px-4 text-center">
-      <h2 className="text-3xl md:text-4xl font-headline font-semibold text-foreground mb-6">Newsletter Subscribe</h2>
-      <p className="text-foreground/80 mb-8 max-w-xl mx-auto">
-        Stay updated with our latest projects, design trends, and exclusive offers.
-      </p>
-      <form className="max-w-md mx-auto flex gap-2">
-        <Input type="email" placeholder="Enter your email" className="bg-background/80" />
-        <Button type="submit" className="bg-primary text-primary-foreground hover:bg-primary/90">
-          Enter
-        </Button>
-      </form>
-    </div>
-  </section>
-);
-
 
 export default function Home() {
   return (
@@ -210,7 +186,6 @@ export default function Home() {
         </div>
       </div>
       
-      <NewsletterSection />
     </>
   );
 }
