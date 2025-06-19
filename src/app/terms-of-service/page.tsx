@@ -1,6 +1,14 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useEffect, useState } from 'react';
 
 const TermsOfServicePage = () => {
+  const [lastUpdated, setLastUpdated] = useState('');
+
+  useEffect(() => {
+    setLastUpdated(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));
+  }, []);
+
   return (
     <div className="bg-background min-h-screen py-16 md:py-24">
       <div className="container mx-auto max-w-4xl px-4">
@@ -9,10 +17,10 @@ const TermsOfServicePage = () => {
             <CardTitle className="font-headline text-3xl md:text-4xl text-primary">Terms of Service</CardTitle>
           </CardHeader>
           <CardContent className="p-6 md:p-10 space-y-6 text-foreground/80 leading-relaxed">
-            <p><strong>Last Updated:</strong> {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <p><strong>Last Updated:</strong> {lastUpdated || 'Loading...'}</p>
 
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">1. Agreement to Terms</h2>
-            <p>By accessing or using our website [Your Website URL] (the "Site"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, then you may not access the Site.</p>
+            <p>By accessing or using our website, you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, then you may not access the Site.</p>
 
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">2. Intellectual Property</h2>
             <p>The Site and its original content, features, and functionality are owned by Elysian Interiors and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws. This includes all text, graphics, logos, images, as well as the compilation thereof, and any software used on the Site.</p>
@@ -36,7 +44,7 @@ const TermsOfServicePage = () => {
             <p>In no event shall Elysian Interiors or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Elysian Interiors's website, even if Elysian Interiors or a Elysian Interiors authorized representative has been notified orally or in writing of the possibility of such damage.</p>
 
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">6. Governing Law</h2>
-            <p>These terms and conditions are governed by and construed in accordance with the laws of [Your State/Country] and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
+            <p>These terms and conditions are governed by and construed in accordance with the laws of Tamil Nadu, India and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
 
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">7. Changes to Terms</h2>
             <p>Elysian Interiors reserves the right, at its sole discretion, to modify or replace these Terms at any time. We will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
@@ -44,9 +52,10 @@ const TermsOfServicePage = () => {
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">8. Contact Us</h2>
             <p>If you have any questions about these Terms, please contact us at:</p>
             <p>Elysian Interiors<br/>
-            123 Design Avenue, Suite 400<br/>
-            Metropolis, ST 12345<br/>
-            Email: legal@elysianinteriors.com</p>
+            1st Floor, AMBAL HARWARES, 58, Santhai Rd<br/>
+            Golden Nagar, Mettupatti, Dindigul, Tamil Nadu 624002, India<br/>
+            Email: legal@elysianinteriors.com<br/>
+            Phone: +91 96261 11223</p>
           </CardContent>
         </Card>
       </div>

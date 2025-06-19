@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -71,8 +72,8 @@ const ContactPage = () => {
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-6 w-6 text-accent mt-1 shrink-0" />
                     <div>
-                      <p className="font-semibold text-foreground">123 Design Avenue, Suite 400</p>
-                      <p className="text-foreground/80">Metropolis, ST 12345</p>
+                      <p className="font-semibold text-foreground">1st Floor, AMBAL HARWARES, 58, Santhai Rd</p>
+                      <p className="text-foreground/80">Golden Nagar, Mettupatti, Dindigul, Tamil Nadu 624002, India</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -83,8 +84,8 @@ const ContactPage = () => {
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-accent shrink-0" />
-                    <Link href="tel:+12125550123" className="text-foreground/80 hover:text-primary transition-colors">
-                      +1 (212) 555-0123
+                    <Link href="tel:+919626111223" className="text-foreground/80 hover:text-primary transition-colors">
+                      +91 96261 11223
                     </Link>
                   </div>
                 </CardContent>
@@ -96,8 +97,17 @@ const ContactPage = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="aspect-video bg-muted rounded-md flex items-center justify-center">
-                    <p className="text-muted-foreground">Google Maps Placeholder</p>
-                    {/* In a real app, you'd embed Google Maps here */}
+                    {/* Replace with an actual map embed if possible, or a static image of the map */}
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.373051016599!2d77.9721026!3d10.3500201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00abbbc1cab045%3A0x9c3583ece4f19b1f!2sAR%20Architecture%20Design%20Studio!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                        width="100%"
+                        height="100%"
+                        style={{ border:0 }}
+                        allowFullScreen={false}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="AR Architecture Design Studio Location"
+                    ></iframe>
                   </div>
                 </CardContent>
               </Card>

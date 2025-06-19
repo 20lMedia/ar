@@ -1,6 +1,14 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useEffect, useState } from 'react';
 
 const PrivacyPolicyPage = () => {
+  const [lastUpdated, setLastUpdated] = useState('');
+
+  useEffect(() => {
+    setLastUpdated(new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }));
+  }, []);
+
   return (
     <div className="bg-background min-h-screen py-16 md:py-24">
       <div className="container mx-auto max-w-4xl px-4">
@@ -9,10 +17,10 @@ const PrivacyPolicyPage = () => {
             <CardTitle className="font-headline text-3xl md:text-4xl text-primary">Privacy Policy</CardTitle>
           </CardHeader>
           <CardContent className="p-6 md:p-10 space-y-6 text-foreground/80 leading-relaxed">
-            <p><strong>Last Updated:</strong> {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <p><strong>Last Updated:</strong> {lastUpdated || 'Loading...'}</p>
             
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">1. Introduction</h2>
-            <p>Welcome to Elysian Interiors. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [Your Website URL]. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+            <p>Welcome to Elysian Interiors. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
 
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">2. Collection of Your Information</h2>
             <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
@@ -38,9 +46,10 @@ const PrivacyPolicyPage = () => {
             <h2 className="text-2xl font-headline font-semibold text-primary pt-4">6. Contact Us</h2>
             <p>If you have questions or comments about this Privacy Policy, please contact us at:</p>
             <p>Elysian Interiors<br/>
-            123 Design Avenue, Suite 400<br/>
-            Metropolis, ST 12345<br/>
-            Email: privacy@elysianinteriors.com</p>
+            1st Floor, AMBAL HARWARES, 58, Santhai Rd<br/>
+            Golden Nagar, Mettupatti, Dindigul, Tamil Nadu 624002, India<br/>
+            Email: privacy@elysianinteriors.com<br/>
+            Phone: +91 96261 11223</p>
           </CardContent>
         </Card>
       </div>

@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import Logo from './logo';
@@ -16,8 +17,8 @@ const Footer = () => {
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
     { href: '/services', label: 'Services' },
-    { href: '/portfolio', label: 'Portfolio' }, // Show project -> Portfolio
-    { href: '/testimonials', label: 'Testimonials' }, // News -> Testimonials (more relevant)
+    { href: '/portfolio', label: 'Portfolio' },
+    { href: '/testimonials', label: 'Testimonials' },
     { href: '/contact', label: 'Contact' },
   ];
 
@@ -50,7 +51,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 mt-0.5 shrink-0 text-accent" />
-                <span>123 Design Avenue, Metropolis, ST 12345</span>
+                <span>1st Floor, AMBAL HARWARES, 58, Santhai Rd, Golden Nagar, Mettupatti, Dindigul, Tamil Nadu 624002, India</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 shrink-0 text-accent" />
@@ -58,7 +59,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 shrink-0 text-accent" />
-                <a href="tel:+12125550123" className="hover:text-accent transition-colors">+1 (212) 555-0123</a>
+                <a href="tel:+919626111223" className="hover:text-accent transition-colors">+91 96261 11223</a>
               </li>
             </ul>
           </div>
