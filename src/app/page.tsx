@@ -48,7 +48,7 @@ const featuredServices: FeaturedServiceItem[] = [
   {
     slug: 'residential',
     title: 'Luxury Residential Design',
-    imageUrl: '/images/home/carousel-residential-living.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1611094016919-36b65678f3d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBsaXZpbmclMjByb29tfGVufDB8fHx8MTc1MDQxNTY5Mnww&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Luxurious residential living room design',
     href: '/services/residential',
     aiHint: 'luxury living room'
@@ -56,7 +56,7 @@ const featuredServices: FeaturedServiceItem[] = [
   {
     slug: 'commercial',
     title: 'High-End Commercial Spaces',
-    imageUrl: '/images/home/carousel-commercial-lobby.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1544367945-4125eb396314?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb21tZXJjaWFsJTIwbG9iYnl8ZW58MHx8fHwxNzUwNDE1NjkyfDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Modern commercial office lobby design',
     href: '/services/commercial',
     aiHint: 'commercial lobby'
@@ -64,7 +64,7 @@ const featuredServices: FeaturedServiceItem[] = [
   {
     slug: 'styling',
     title: 'Bespoke Furniture & Styling',
-    imageUrl: '/images/home/carousel-styling-detail.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1704717703801-c9c4965e31d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmdXJuaXR1cmUlMjBkZXRhaWx8ZW58MHx8fHwxNzUwNDE1NjkyfDA&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Interior styling detail with bespoke furniture',
     href: '/services/styling',
     aiHint: 'furniture detail'
@@ -72,7 +72,7 @@ const featuredServices: FeaturedServiceItem[] = [
   {
     slug: 'project-management',
     title: 'Full-Service Project Management',
-    imageUrl: '/images/home/carousel-project-planning.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1742415106160-594d07f6cc23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhcmNoaXRlY3R1cmFsJTIwYmx1ZXByaW50c3xlbnwwfHx8fDE3NTA0MTU2OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     imageAlt: 'Architectural blueprints for project management',
     href: '/services/project-management',
     aiHint: 'architectural blueprints'
@@ -377,3 +377,4 @@ export default function Home() {
     </>
   );
 }
+
