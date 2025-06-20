@@ -137,30 +137,32 @@ const FeaturedServicesCarousel = () => (
 
 const AboutStudioSection = () => (
   <section className="py-16 md:py-24 bg-secondary">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      <div className="px-4 sm:px-6 md:pl-8 lg:pl-16 xl:pl-24 md:pr-0 py-8 md:py-0">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold text-primary mb-6 leading-tight">
-          Transforming Spaces with Visionary Design.
-        </h2>
-        <p className="text-lg text-secondary-foreground/80 mb-8 leading-relaxed">
-          Welcome to AR Architecture Design Studio. We believe that great design has the power to transform. With a rich history of innovation and a forward-thinking approach, we turn ambitious visions into inspiring realities.
-        </p>
-        <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-highlight hover:text-highlight-foreground rounded-md">
-          <Link href="/about">
-            Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </Button>
-      </div>
-      <div className="px-4 sm:px-6 md:pr-8 lg:pr-16 xl:pr-24 md:pl-0 py-8 md:py-0 rounded-lg overflow-hidden shadow-xl">
-        <div className="aspect-w-4 aspect-h-3">
-          <Image
-            src="https://images.unsplash.com/photo-1583329550487-0fa300a4cd1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHxlbnwwfHx8fDE3NTA0MTAzMzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="AR Architecture Design Studio - Modern architectural design"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-            data-ai-hint="architecture interior"
-          />
+    <div className="container mx-auto px-4">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold text-primary mb-6 leading-tight">
+            Transforming Spaces with Visionary Design.
+          </h2>
+          <p className="text-lg text-secondary-foreground/80 mb-8 leading-relaxed">
+            Welcome to AR Architecture Design Studio. We believe that great design has the power to transform. With a rich history of innovation and a forward-thinking approach, we turn ambitious visions into inspiring realities.
+          </p>
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-highlight hover:text-highlight-foreground rounded-md">
+            <Link href="/about">
+              Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+        <div className="rounded-lg overflow-hidden shadow-xl">
+          <div className="aspect-w-4 aspect-h-3">
+            <Image
+              src="https://images.unsplash.com/photo-1583329550487-0fa300a4cd1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHxlbnwwfHx8fDE3NTA0MTAzMzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="AR Architecture Design Studio - Modern architectural design"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+              data-ai-hint="architecture interior"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -398,3 +400,4 @@ export default function Home() {
     </>
   );
 }
+
