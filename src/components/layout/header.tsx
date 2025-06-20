@@ -32,9 +32,9 @@ const NavLink: FC<NavLinkProps> = ({ href, label, isMobile = false, onClose }) =
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium transition-colors hover:text-highlight", 
-        isActive ? "text-primary font-semibold" : "text-foreground/70", 
-        isMobile && "block py-2 text-lg"
+        "text-base font-medium transition-colors hover:text-highlight", 
+        isActive ? "text-primary font-semibold" : "text-foreground/80", 
+        isMobile && "block py-2 text-base"
       )}
       onClick={onClose}
       aria-current={isActive ? "page" : undefined}
@@ -49,13 +49,13 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Logo />
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <NavLink key={link.href} href={link.href} label={link.label} />
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="outline" size="sm" className="hidden md:inline-flex">
+          <Button asChild variant="outline" size="sm" className="hidden md:inline-flex text-base">
             <Link href="/contact">Get a Quote</Link>
           </Button>
           <div className="md:hidden">
@@ -77,7 +77,7 @@ const Header = () => {
                        </SheetClose>
                     ))}
                      <SheetClose asChild>
-                        <Button asChild variant="default" className="w-full mt-4 bg-primary text-primary-foreground">
+                        <Button asChild variant="default" className="w-full mt-4 bg-primary text-primary-foreground text-base">
                             <Link href="/contact">Get a Quote</Link>
                         </Button>
                      </SheetClose>
