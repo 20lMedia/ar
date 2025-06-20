@@ -231,22 +231,6 @@ const WhyChooseUsSection = () => {
   );
 };
 
-const FullWidthImageSection = () => (
-  <section className="py-16 md:py-24">
-    <div className="container mx-auto px-4">
-      <div className="relative aspect-[16/7] rounded-lg overflow-hidden">
-        <Image 
-          src="/images/home/fullwidth-panoramic-living.jpg" 
-          alt="Spacious modern living room" 
-          layout="fill" 
-          objectFit="cover" 
-          data-ai-hint="panoramic living room"
-        />
-      </div>
-    </div>
-  </section>
-);
-
 interface HomePageProject {
   id: string;
   name: string;
@@ -389,7 +373,6 @@ const ClientTestimonialsSection = () => (
               "{testimonial.quote}"
             </p>
             <div className="flex items-center space-x-3">
-              
               <div>
                 <p className="font-semibold text-primary">{testimonial.name}</p>
                 <p className="text-sm text-secondary-foreground/70">{testimonial.role}</p>
@@ -410,7 +393,6 @@ export default function Home() {
       <FeaturedServicesCarousel />
       <AboutStudioSection />
       <WhyChooseUsSection />
-      <FullWidthImageSection />
       <DesignProjectsSection />
       <ClientTestimonialsSection />
     </>
