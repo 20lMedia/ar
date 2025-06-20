@@ -387,6 +387,43 @@ const ClientTestimonialsSection = () => (
   </section>
 );
 
+const FinalCallToActionSection = () => (
+  <section className="py-16 md:py-24 bg-background">
+    <div className="container mx-auto px-4">
+      <div className="relative rounded-lg overflow-hidden shadow-2xl">
+        <Image
+          src="https://placehold.co/1200x500.png"
+          alt="Comfortable living room setting for consultation"
+          layout="fill"
+          objectFit="cover"
+          className="absolute z-0"
+          data-ai-hint="cozy living room evening"
+        />
+        <div className="absolute inset-0 bg-black/60 z-10" /> {/* Dark overlay */}
+        <div className="relative z-20 p-12 md:p-20 text-center flex flex-col items-center">
+          <div className="mb-4 inline-block bg-background text-primary text-xs font-semibold uppercase px-4 py-1.5 rounded-full shadow-md">
+            Get Started Today
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-headline font-bold text-primary-foreground mb-6 max-w-2xl">
+            It All Starts With a Simple Call
+          </h2>
+          <p className="text-lg text-primary-foreground/90 mb-10 max-w-xl">
+            Speak to our design experts and find the perfect solutions for your space. We're here to help!
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-accent text-accent-foreground hover:bg-highlight hover:text-highlight-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105"
+          >
+            <Link href="/contact">
+              Talk to Our Experts <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export default function Home() {
   return (
@@ -397,7 +434,7 @@ export default function Home() {
       <WhyChooseUsSection />
       <DesignProjectsSection />
       <ClientTestimonialsSection />
+      <FinalCallToActionSection />
     </>
   );
 }
-
