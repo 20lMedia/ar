@@ -218,7 +218,15 @@ const FullWidthImageSection = () => (
   </section>
 );
 
-const homePageProjects = [
+interface HomePageProject {
+  id: string;
+  name: string;
+  imageUrl: string;
+  imageHint: string;
+  href: string;
+}
+
+const homePageProjects: HomePageProject[] = [
   {
     id: '01',
     name: 'Modern Apartment',
@@ -296,14 +304,80 @@ const DesignProjectsSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          {/* Optional: Add CarouselPrevious/Next if global navigation is desired */}
-          {/* <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 z-10 hidden md:flex" /> */}
-          {/* <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 z-10 hidden md:flex" /> */}
         </Carousel>
       </div>
     </section>
   );
 };
+
+interface HomePageTestimonial {
+  id: number;
+  quote: string;
+  name: string;
+  role: string;
+  avatarUrl: string;
+  avatarHint: string;
+}
+
+const homePageTestimonials: HomePageTestimonial[] = [
+  {
+    id: 1,
+    quote: "The design team exceeded my expectations. Elegant, sturdy, and incredibly comfortable!",
+    name: "Michael L.",
+    role: "Verified Buyer",
+    avatarUrl: "https://placehold.co/64x64.png",
+    avatarHint: "professional portrait"
+  },
+  {
+    id: 2,
+    quote: "Love the craftsmanship. I get compliments every time someone visits my home.",
+    name: "Rachel M.",
+    role: "Homeowner",
+    avatarUrl: "https://placehold.co/64x64.png",
+    avatarHint: "lifestyle portrait"
+  },
+  {
+    id: 3,
+    quote: "Fast delivery and the quality is top-notch. Definitely recommending AR Studio again.",
+    name: "Tom S.",
+    role: "Interior Designer",
+    avatarUrl: "https://placehold.co/64x64.png",
+    avatarHint: "creative headshot"
+  },
+];
+
+const ClientTestimonialsSection = () => (
+  <section className="py-16 md:py-24 bg-secondary">
+    <div className="container mx-auto px-4">
+      <h2 className="text-3xl md:text-4xl font-headline font-semibold text-center text-primary mb-12">
+        Client Testimonials
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        {homePageTestimonials.map((testimonial) => (
+          <div key={testimonial.id} className="flex flex-col items-center text-center md:items-start md:text-left">
+            <p className="text-lg text-secondary-foreground/90 mb-6 leading-relaxed">
+              "{testimonial.quote}"
+            </p>
+            <div className="flex items-center space-x-3">
+              <Image
+                src={testimonial.avatarUrl}
+                alt={testimonial.name}
+                width={48} 
+                height={48}
+                className="rounded-full"
+                data-ai-hint={testimonial.avatarHint}
+              />
+              <div>
+                <p className="font-semibold text-primary">{testimonial.name}</p>
+                <p className="text-sm text-secondary-foreground/70">{testimonial.role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 
 export default function Home() {
@@ -315,6 +389,7 @@ export default function Home() {
       <YourHomeReflectionSection />
       <FullWidthImageSection />
       <DesignProjectsSection />
+      <ClientTestimonialsSection />
     </>
   );
 }
