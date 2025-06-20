@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, MoveRight, LayoutGrid, Briefcase, Users, Mail } from 'lucide-react';
+import { ArrowRight, MoveRight } from 'lucide-react';
 
 const NewHeroSection = () => (
   <section className="relative min-h-[70vh] md:min-h-[calc(100vh-4rem)] flex flex-col justify-center bg-gray-200">
@@ -170,44 +170,6 @@ const ProjectShowcaseItem = ({
   </div>
 );
 
-const DiscoverOurStudioSection = () => {
-  const sections = [
-    { title: "Our Portfolio", description: "Explore our curated collection of inspiring projects.", href: "/portfolio", icon: LayoutGrid },
-    { title: "Design Services", description: "Discover the range of bespoke services we offer.", href: "/services", icon: Briefcase },
-    { title: "Client Stories", description: "Read what our valued clients have to say about us.", href: "/testimonials", icon: Users },
-    { title: "Get In Touch", description: "Start your design journey with a personal consultation.", href: "/contact", icon: Mail },
-  ];
-
-  return (
-    <section className="py-16 md:py-24 bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary">Explore AR Architecture Studio</h2>
-          <p className="text-lg text-primary-foreground/80 mt-4 max-w-2xl mx-auto">
-            Delve deeper into our world of design, craftsmanship, and client success.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {sections.map((section) => (
-            <Link key={section.title} href={section.href} className="block group">
-              <Card className="bg-background text-foreground h-full flex flex-col items-center text-center p-6 hover:shadow-xl transition-shadow rounded-lg">
-                <div className="p-4 bg-accent/20 rounded-full mb-4 group-hover:bg-accent/30 transition-colors">
-                  <section.icon className="h-10 w-10 text-accent" />
-                </div>
-                <h3 className="text-xl font-headline font-semibold text-primary mb-2">{section.title}</h3>
-                <p className="text-sm text-foreground/70 flex-grow">{section.description}</p>
-                 <Button variant="link" size="sm" className="mt-4 text-accent group-hover:text-accent/80 p-0">
-                    Learn More <ArrowRight className="ml-1 h-3 w-3" />
-                  </Button>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
 
 export default function Home() {
   return (
@@ -232,9 +194,6 @@ export default function Home() {
         image1="/images/home/project-villa-luxury-1.jpg"
         image2="/images/home/project-villa-swimming-2.jpg"
       />
-      <DiscoverOurStudioSection />
     </>
   );
 }
-
-    
