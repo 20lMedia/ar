@@ -288,7 +288,16 @@ const DesignProjectsSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
         </Carousel>
+        <div className="mt-12 text-center">
+          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md">
+            <Link href="/portfolio">
+              Explore Full Portfolio <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
@@ -299,8 +308,6 @@ interface HomePageTestimonial {
   quote: string;
   name: string;
   role: string;
-  avatarUrl: string;
-  avatarHint: string;
 }
 
 const homePageTestimonials: HomePageTestimonial[] = [
@@ -309,24 +316,18 @@ const homePageTestimonials: HomePageTestimonial[] = [
     quote: "The design team exceeded my expectations. Elegant, sturdy, and incredibly comfortable!",
     name: "Michael L.",
     role: "Verified Buyer",
-    avatarUrl: "https://images.unsplash.com/photo-1573496527892-904f897eb744?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzUwNDE0NzkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    avatarHint: "professional portrait"
   },
   {
     id: 2,
     quote: "Love the craftsmanship. I get compliments every time someone visits my home.",
     name: "Rachel M.",
     role: "Homeowner",
-    avatarUrl: "https://images.unsplash.com/photo-1661758408961-c5fd2eaf3b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGlmZXN0eWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzUwNDE0NzkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    avatarHint: "lifestyle portrait"
   },
   {
     id: 3,
     quote: "Fast delivery and the quality is top-notch. Definitely recommending AR Studio again.",
     name: "Tom S.",
     role: "Interior Designer",
-    avatarUrl: "https://images.unsplash.com/photo-1614139767414-f9011dff53bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjcmVhdGl2ZSUyMGhlYWRzaG90fGVufDB8fHx8MTc1MDQxNDc5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    avatarHint: "creative headshot"
   },
 ];
 
@@ -343,6 +344,7 @@ const ClientTestimonialsSection = () => (
               "{testimonial.quote}"
             </p>
             <div className="flex items-center space-x-3">
+              {/* Avatar Image removed as per user request */}
               <div>
                 <p className="font-semibold text-primary">{testimonial.name}</p>
                 <p className="text-sm text-secondary-foreground/70">{testimonial.role}</p>
