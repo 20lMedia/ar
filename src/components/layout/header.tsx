@@ -1,3 +1,4 @@
+
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -32,9 +33,9 @@ const NavLink: FC<NavLinkProps> = ({ href, label, isMobile = false, onClose }) =
     <Link
       href={href}
       className={cn(
-        "text-base font-medium transition-colors hover:text-highlight", 
+        "text-sm font-medium transition-colors hover:text-highlight", 
         isActive ? "text-primary font-semibold" : "text-foreground/80", 
-        isMobile && "block py-2 text-base"
+        isMobile && "block py-2 text-sm"
       )}
       onClick={onClose}
       aria-current={isActive ? "page" : undefined}
@@ -55,7 +56,7 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="outline" size="sm" className="hidden md:inline-flex text-base">
+          <Button asChild variant="outline" size="sm" className="hidden md:inline-flex">
             <Link href="/contact">Get a Quote</Link>
           </Button>
           <div className="md:hidden">
@@ -77,7 +78,7 @@ const Header = () => {
                        </SheetClose>
                     ))}
                      <SheetClose asChild>
-                        <Button asChild variant="default" className="w-full mt-4 bg-primary text-primary-foreground text-base">
+                        <Button asChild variant="default" className="w-full mt-4 bg-primary text-primary-foreground">
                             <Link href="/contact">Get a Quote</Link>
                         </Button>
                      </SheetClose>
