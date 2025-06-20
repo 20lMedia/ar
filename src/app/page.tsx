@@ -245,11 +245,11 @@ const DesignProjectsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-headline font-semibold text-foreground mb-2">
             Selected Projects
           </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl">
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             A glimpse into our diverse portfolio of inspiring spaces, where design meets functionality.
           </p>
         </div>
