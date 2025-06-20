@@ -132,6 +132,17 @@ const AboutStudioSection = () => (
   <section className="py-16 md:py-24 bg-secondary">
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="rounded-lg overflow-hidden shadow-xl">
+          <div className="aspect-w-4 aspect-h-3">
+            <Image
+              src="/images/home/about-studio-showcase.jpg"
+              alt="AR Architecture Design Studio - Modern architectural design"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
+        </div>
         <div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold text-primary mb-6 leading-tight">
             Transforming Spaces with Visionary Design.
@@ -144,17 +155,6 @@ const AboutStudioSection = () => (
               Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
-        </div>
-        <div className="rounded-lg overflow-hidden shadow-xl">
-          <div className="aspect-w-4 aspect-h-3">
-            <Image
-              src="/images/home/about-studio-showcase.jpg"
-              alt="AR Architecture Design Studio - Modern architectural design"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-            />
-          </div>
         </div>
       </div>
     </div>
