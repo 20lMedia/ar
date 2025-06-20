@@ -94,7 +94,7 @@ const FeaturedServicesCarousel = () => (
         <CarouselContent className="-ml-4">
           {featuredServices.map((service) => (
             <CarouselItem key={service.slug} className="pl-4 md:basis-1/2 lg:basis-1/3">
-              <div className="p-1">
+              <div className="p-1 h-full group">
                 <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
                   <CardContent className="p-0 relative aspect-[4/3] rounded-t-lg overflow-hidden">
                     <Image
