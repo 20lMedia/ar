@@ -36,11 +36,12 @@ const AboutPage = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/about/design-studio-moodboard.png"
+                src="https://source.unsplash.com/random/600x700/?design+studio+moodboard"
                 alt="Inspiring interior design moodboard"
                 width={600}
                 height={700}
                 className="w-full h-auto object-cover"
+                data-ai-hint="design moodboard"
               />
             </div>
           </div>
@@ -62,11 +63,12 @@ const AboutPage = () => {
             </div>
             <div className="md:order-1 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/about/founder-eleonora-vance.png"
+                src="https://source.unsplash.com/random/600x700/?architect+portrait"
                 alt="Founder of AR Architecture Design Studio"
                 width={600}
                 height={700}
                 className="w-full h-auto object-cover"
+                data-ai-hint="architect portrait"
               />
             </div>
           </div>
