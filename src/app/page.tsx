@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight, MoveRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 const NewHeroSection = () => (
   <section className="relative min-h-[70vh] md:min-h-[calc(100vh-4rem)] flex flex-col justify-center bg-gray-200">
@@ -33,30 +34,99 @@ const NewHeroSection = () => (
   </section>
 );
 
-const ResidentialServicesSection = () => (
+interface FeaturedServiceItem {
+  slug: string;
+  title: string;
+  imageUrl: string;
+  imageAlt: string;
+  href: string;
+}
+
+const featuredServices: FeaturedServiceItem[] = [
+  {
+    slug: 'residential',
+    title: 'Luxury Residential Design',
+    imageUrl: '/images/home/carousel-residential-living.jpg',
+    imageAlt: 'Luxurious residential living room design',
+    href: '/services/residential',
+  },
+  {
+    slug: 'commercial',
+    title: 'High-End Commercial Spaces',
+    imageUrl: '/images/home/carousel-commercial-lobby.jpg',
+    imageAlt: 'Modern commercial office lobby design',
+    href: '/services/commercial',
+  },
+  {
+    slug: 'styling',
+    title: 'Bespoke Furniture & Styling',
+    imageUrl: '/images/home/carousel-styling-detail.jpg',
+    imageAlt: 'Interior styling detail with bespoke furniture',
+    href: '/services/styling',
+  },
+  {
+    slug: 'project-management',
+    title: 'Full-Service Project Management',
+    imageUrl: '/images/home/carousel-project-planning.jpg',
+    imageAlt: 'Architectural blueprints for project management',
+    href: '/services/project-management',
+  },
+];
+
+const FeaturedServicesCarousel = () => (
   <section className="py-16 md:py-24 bg-background">
     <div className="container mx-auto px-4">
-      <div className="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-headline font-semibold text-foreground mb-4">Residential Services</h2>
-          <Link href="/services/residential" className="text-sm text-accent hover:text-highlight font-medium flex items-center">
-            View <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="relative aspect-[3/4] group">
-            <Image src="/images/home/residential-luxury-bedroom.jpg" alt="Residential Design 1" layout="fill" objectFit="cover" className="rounded-md" />
-            <div className="absolute bottom-4 left-4 text-2xl font-headline font-bold text-white bg-black/30 p-2 rounded">01</div>
-          </div>
-          <div className="relative aspect-[3/4] group mt-8">
-            <Image src="/images/home/residential-modern-kitchen.jpg" alt="Residential Design 2" layout="fill" objectFit="cover" className="rounded-md" />
-            <div className="absolute bottom-4 left-4 text-2xl font-headline font-bold text-white bg-black/30 p-2 rounded">02</div>
-          </div>
-        </div>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-headline font-semibold text-foreground mb-4">
+          Featured Design Services
+        </h2>
+        <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+          Explore our range of specialized design services, tailored to bring your unique vision to life with precision and artistry.
+        </p>
       </div>
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-4">
+          {featuredServices.map((service) => (
+            <CarouselItem key={service.slug} className="pl-4 md:basis-1/2 lg:basis-1/3">
+              <div className="p-1">
+                <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+                  <CardContent className="p-0 relative aspect-[4/3] rounded-t-lg overflow-hidden">
+                    <Image
+                      src={service.imageUrl}
+                      alt={service.imageAlt}
+                      layout="fill"
+                      objectFit="cover"
+                      className="group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </CardContent>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="font-headline text-xl font-semibold text-primary mb-3">{service.title}</h3>
+                    <div className="mt-auto">
+                      <Button asChild variant="link" className="p-0 text-accent hover:text-highlight font-semibold">
+                        <Link href={service.href}>
+                          View Service <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden md:flex" />
+        <CarouselNext className="hidden md:flex" />
+      </Carousel>
     </div>
   </section>
 );
+
 
 const AboutStudioSection = () => (
   <section className="py-16 md:py-24 bg-secondary">
@@ -175,7 +245,7 @@ export default function Home() {
   return (
     <>
       <NewHeroSection />
-      <ResidentialServicesSection />
+      <FeaturedServicesCarousel />
       <AboutStudioSection />
       <YourHomeReflectionSection />
       <FullWidthImageSection />
