@@ -4,36 +4,37 @@
 
 @layer base {
   :root {
-    --background: 40 33% 97%; /* Very light beige #FBF9F4 */
-    --foreground: 210 10% 15%; /* Very dark gray #212529 */
+    --background: 216 20% 95%; /* Light gray #F0F2F5 */
+    --foreground: 210 10% 15%; /* Very dark gray */
 
-    --muted: 210 30% 92%; /* Light muted gray */
-    --muted-foreground: 210 10% 45%; 
+    --muted: 216 20% 90%; /* Derived from background, slightly darker */
+    --muted-foreground: 210 10% 45%; /* Mid-gray text */
 
-    --popover: 0 0% 100%; 
-    --popover-foreground: 210 10% 15%; 
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 210 10% 15%; /* Dark text */
 
-    --card: 0 0% 100%; 
-    --card-foreground: 210 10% 15%; 
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 210 10% 15%; /* Dark text */
 
-    --border: 210 20% 88%; 
-    --input: 210 20% 96%; 
+    --border: 216 20% 85%; /* Derived from background, for inputs, card borders etc. */
+    --input: 0 0% 100%;    /* White bg for input fields */
 
-    --primary: 210 10% 15%; /* Very dark gray for primary elements like buttons */
-    --primary-foreground: 40 33% 97%; /* Light text for primary elements */
+    --primary: 206 10% 69%; /* Soft, desaturated blue-gray #A7B0B7 */
+    --primary-foreground: 210 10% 15%; /* Dark text for contrast with light primary */
 
-    --secondary: 210 10% 10%; /* Almost black for dark sections */
-    --secondary-foreground: 40 33% 97%; /* Light text for dark sections */
+    --secondary: 210 10% 10%; /* Almost black (for contrasting sections) */
+    --secondary-foreground: 0 0% 98%; /* White text (was very light beige) */
 
-    --accent: 25 70% 70%; /* Soft terracotta #E8A87C */
-    --accent-foreground: 210 10% 15%; /* Dark text for accent elements */
+    --accent: 43 22% 60%; /* Muted gold #B0A383 */
+    --accent-foreground: 210 10% 15%; /* Dark text for contrast with muted gold */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --ring: 25 70% 70%; /* Soft terracotta for focus rings */
+    --ring: 43 22% 60%; /* Muted gold, for focus rings, matching accent */
     --radius: 0.5rem;
 
+    /* Sidebar colors remain unchanged as per initial setup, unless specified */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -43,6 +44,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
     /* Keeping dark mode defaults, can be adjusted later if needed */
     --background: 0 0% 3.9%;
