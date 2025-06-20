@@ -139,7 +139,7 @@ const AboutStudioSection = () => (
   <section className="py-16 md:py-24 bg-secondary">
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div>
+        <div className="md:order-1 px-4 sm:px-6 md:pl-8 lg:pl-16 xl:pl-24 md:pr-0 py-8 md:py-0">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold text-primary mb-6 leading-tight">
             Transforming Spaces with Visionary Design.
           </h2>
@@ -152,7 +152,7 @@ const AboutStudioSection = () => (
             </Link>
           </Button>
         </div>
-        <div className="rounded-lg overflow-hidden shadow-xl">
+        <div className="md:order-2 rounded-lg overflow-hidden shadow-xl px-4 sm:px-6 md:pr-8 lg:pr-16 xl:pr-24 md:pl-0 py-8 md:py-0">
           <div className="aspect-w-4 aspect-h-3">
             <Image
               src="https://images.unsplash.com/photo-1583329550487-0fa300a4cd1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHxlbnwwfHx8fDE3NTA0MTAzMzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -401,6 +401,14 @@ const FinalCallToActionSection = () => (
         />
         <div className="absolute inset-0 bg-black/60 z-10" /> {/* Dark overlay */}
         <div className="relative z-20 p-12 md:p-20 text-center flex flex-col items-center">
+          <Image
+            src="https://placehold.co/300x150.png"
+            alt="Illustrative image for call to action"
+            width={300}
+            height={150}
+            className="mb-6 rounded-lg shadow-md"
+            data-ai-hint="design inspiration"
+          />
           <div className="mb-4 inline-block bg-background text-primary text-xs font-semibold uppercase px-4 py-1.5 rounded-full shadow-md">
             Get Started Today
           </div>
