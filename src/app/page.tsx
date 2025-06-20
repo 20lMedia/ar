@@ -137,33 +137,31 @@ const FeaturedServicesCarousel = () => (
 
 const AboutStudioSection = () => (
   <section className="py-16 md:py-24 bg-secondary">
-    <div className="container mx-auto px-4">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
-        <div className="rounded-lg overflow-hidden shadow-xl">
-          <div className="aspect-w-4 aspect-h-3">
-            <Image
-              src="https://images.unsplash.com/photo-1583329550487-0fa300a4cd1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHxlbnwwfHx8fDE3NTA0MTAzMzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="AR Architecture Design Studio - Modern architectural design"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-              data-ai-hint="architecture interior"
-            />
-          </div>
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="rounded-lg overflow-hidden shadow-xl">
+        <div className="aspect-w-4 aspect-h-3">
+          <Image
+            src="https://images.unsplash.com/photo-1583329550487-0fa300a4cd1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHxlbnwwfHx8fDE3NTA0MTAzMzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="AR Architecture Design Studio - Modern architectural design"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+            data-ai-hint="architecture interior"
+          />
         </div>
-        <div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold text-primary mb-6 leading-tight">
-            Transforming Spaces with Visionary Design.
-          </h2>
-          <p className="text-lg text-secondary-foreground/80 mb-8 leading-relaxed">
-            Welcome to AR Architecture Design Studio. We believe that great design has the power to transform. With a rich history of innovation and a forward-thinking approach, we turn ambitious visions into inspiring realities.
-          </p>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-highlight hover:text-highlight-foreground rounded-md">
-            <Link href="/about">
-              Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
+      </div>
+      <div className="px-4 sm:px-6 md:pl-0 md:pr-8 lg:pr-16 xl:pr-24 py-8 md:py-0">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold text-primary mb-6 leading-tight">
+          Transforming Spaces with Visionary Design.
+        </h2>
+        <p className="text-lg text-secondary-foreground/80 mb-8 leading-relaxed">
+          Welcome to AR Architecture Design Studio. We believe that great design has the power to transform. With a rich history of innovation and a forward-thinking approach, we turn ambitious visions into inspiring realities.
+        </p>
+        <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-highlight hover:text-highlight-foreground rounded-md">
+          <Link href="/about">
+            Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </Button>
       </div>
     </div>
   </section>
@@ -318,18 +316,24 @@ const homePageTestimonials: HomePageTestimonial[] = [
     quote: "The design team exceeded my expectations. Elegant, sturdy, and incredibly comfortable!",
     name: "Michael L.",
     role: "Verified Buyer",
+    avatarUrl: "https://images.unsplash.com/photo-1573496527892-904f897eb744?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzUwNDE0NzkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    avatarHint: "professional portrait"
   },
   {
     id: 2,
     quote: "Love the craftsmanship. I get compliments every time someone visits my home.",
     name: "Rachel M.",
     role: "Homeowner",
+    avatarUrl: "https://images.unsplash.com/photo-1661758408961-c5fd2eaf3b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGlmZXN0eWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzUwNDE0NzkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    avatarHint: "lifestyle portrait"
   },
   {
     id: 3,
     quote: "Fast delivery and the quality is top-notch. Definitely recommending AR Studio again.",
     name: "Tom S.",
     role: "Interior Designer",
+    avatarUrl: "https://images.unsplash.com/photo-1614139767414-f9011dff53bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjcmVhdGl2ZSUyMGhlYWRzaG90fGVufDB8fHx8MTc1MDQxNDc5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    avatarHint: "creative headshot"
   },
 ];
 
@@ -373,4 +377,3 @@ export default function Home() {
     </>
   );
 }
-
