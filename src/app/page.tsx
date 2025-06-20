@@ -9,7 +9,7 @@ import { ArrowRight, MoveRight } from 'lucide-react';
 const NewHeroSection = () => (
   <section className="relative min-h-[70vh] md:min-h-[calc(100vh-4rem)] flex flex-col justify-center bg-gray-200">
     <Image
-      src="https://source.unsplash.com/random/1920x1000/?modern+living"
+      src="/images/home/hero-modern-living.jpg"
       alt="Modern interior design"
       layout="fill"
       objectFit="cover"
@@ -46,11 +46,11 @@ const ResidentialServicesSection = () => (
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div className="relative aspect-[3/4] group">
-            <Image src="https://source.unsplash.com/random/600x800/?luxury+bedroom" alt="Residential Design 1" layout="fill" objectFit="cover" className="rounded-md" />
+            <Image src="/images/home/residential-luxury-bedroom.jpg" alt="Residential Design 1" layout="fill" objectFit="cover" className="rounded-md" />
             <div className="absolute bottom-4 left-4 text-2xl font-headline font-bold text-white bg-black/30 p-2 rounded">01</div>
           </div>
           <div className="relative aspect-[3/4] group mt-8">
-            <Image src="https://source.unsplash.com/random/600x800/?modern+kitchen" alt="Residential Design 2" layout="fill" objectFit="cover" className="rounded-md" />
+            <Image src="/images/home/residential-modern-kitchen.jpg" alt="Residential Design 2" layout="fill" objectFit="cover" className="rounded-md" />
             <div className="absolute bottom-4 left-4 text-2xl font-headline font-bold text-white bg-black/30 p-2 rounded">02</div>
           </div>
         </div>
@@ -61,10 +61,10 @@ const ResidentialServicesSection = () => (
 
 const YourHomeReflectionSection = () => {
   const services = [
-    { name: 'Commercial Service', image: 'https://source.unsplash.com/random/400x300/?office+workspace', hint: 'office workspace design' },
-    { name: 'Retail Shop Design', image: 'https://source.unsplash.com/random/400x300/?boutique+store', hint: 'boutique store interior' },
-    { name: 'Home Office', image: 'https://source.unsplash.com/random/400x300/?stylish+home', hint: 'stylish home office' },
-    { name: 'Salon Design', image: 'https://source.unsplash.com/random/400x300/?luxury+salon', hint: 'luxury salon interior' },
+    { name: 'Commercial Service', image: '/images/home/service-commercial-office.jpg' },
+    { name: 'Retail Shop Design', image: '/images/home/service-retail-boutique.jpg' },
+    { name: 'Home Office', image: '/images/home/service-home-office.jpg' },
+    { name: 'Salon Design', image: '/images/home/service-salon-luxury.jpg' },
   ];
   return (
     <section className="py-16 md:py-24 bg-secondary text-secondary-foreground">
@@ -96,7 +96,7 @@ const FullWidthImageSection = () => (
   <section className="py-16 md:py-24">
     <div className="container mx-auto px-4">
       <div className="relative aspect-[16/7] rounded-lg overflow-hidden">
-        <Image src="https://source.unsplash.com/random/1600x700/?panoramic+living" alt="Spacious modern living room" layout="fill" objectFit="cover" />
+        <Image src="/images/home/fullwidth-panoramic-living.jpg" alt="Spacious modern living room" layout="fill" objectFit="cover" />
       </div>
     </div>
   </section>
@@ -167,15 +167,15 @@ export default function Home() {
         count="01"
         category="Apartment & Interior"
         title="Apartment & Interior Design and fitout"
-        image1="https://source.unsplash.com/random/800x600/?modern+apartment"
-        image2="https://source.unsplash.com/random/800x600/?apartment+kitchen"
+        image1="/images/home/project-apartment-interior-1.jpg"
+        image2="/images/home/project-apartment-kitchen-2.jpg"
       />
       <ProjectShowcaseItem
         count="02"
         category="Villa Interior"
         title="Villa Interior Design & Fitout"
-        image1="https://source.unsplash.com/random/800x600/?luxury+villa"
-        image2="https://source.unsplash.com/random/800x600/?villa+swimming"
+        image1="/images/home/project-villa-luxury-1.jpg"
+        image2="/images/home/project-villa-swimming-2.jpg"
       />
 
       <div className="py-12 text-center bg-background">

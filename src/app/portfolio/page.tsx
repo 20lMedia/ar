@@ -6,15 +6,15 @@ import { Button } from '@/components/ui/button';
 import { Eye } from 'lucide-react';
 
 const projects = [
-  { id: 1, title: 'The Sky Residence', category: 'Residential', imageUrl: 'https://source.unsplash.com/random/600x800/?luxury+apartment', imageHeight: 800 },
-  { id: 2, title: 'Artisan Cafe & Lounge', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x600/?modern+cafe', imageHeight: 600 },
-  { id: 3, title: 'Serenity Spa Retreat', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x700/?spa+interior', imageHeight: 700 },
-  { id: 4, title: 'Lakeside Manor', category: 'Residential', imageUrl: 'https://source.unsplash.com/random/600x850/?classic+home', imageHeight: 850 },
-  { id: 5, title: 'Boutique Hotel Lobby', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x650/?hotel+lobby', imageHeight: 650 },
-  { id: 6, title: 'Urban Loft Conversion', category: 'Residential', imageUrl: 'https://source.unsplash.com/random/600x750/?industrial+loft', imageHeight: 750 },
-  { id: 7, title: 'Executive Office Suite', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x550/?modern+office', imageHeight: 550 },
-  { id: 8, title: 'Vineyard Estate', category: 'Residential', imageUrl: 'https://source.unsplash.com/random/600x900/?rustic+house', imageHeight: 900 },
-  { id: 9, title: 'Gallery Space', category: 'Commercial', imageUrl: 'https://source.unsplash.com/random/600x500/?art+gallery', imageHeight: 500 },
+  { id: 1, title: 'The Sky Residence', category: 'Residential', imageUrl: '/images/portfolio/sky-residence.jpg', imageHeight: 800 },
+  { id: 2, title: 'Artisan Cafe & Lounge', category: 'Commercial', imageUrl: '/images/portfolio/artisan-cafe.jpg', imageHeight: 600 },
+  { id: 3, title: 'Serenity Spa Retreat', category: 'Commercial', imageUrl: '/images/portfolio/serenity-spa.jpg', imageHeight: 700 },
+  { id: 4, title: 'Lakeside Manor', category: 'Residential', imageUrl: '/images/portfolio/lakeside-manor.jpg', imageHeight: 850 },
+  { id: 5, title: 'Boutique Hotel Lobby', category: 'Commercial', imageUrl: '/images/portfolio/boutique-hotel-lobby.jpg', imageHeight: 650 },
+  { id: 6, title: 'Urban Loft Conversion', category: 'Residential', imageUrl: '/images/portfolio/urban-loft-conversion.jpg', imageHeight: 750 },
+  { id: 7, title: 'Executive Office Suite', category: 'Commercial', imageUrl: '/images/portfolio/executive-office-suite.jpg', imageHeight: 550 },
+  { id: 8, title: 'Vineyard Estate', category: 'Residential', imageUrl: '/images/portfolio/vineyard-estate.jpg', imageHeight: 900 },
+  { id: 9, title: 'Gallery Space', category: 'Commercial', imageUrl: '/images/portfolio/gallery-space.jpg', imageHeight: 500 },
 ];
 
 const PortfolioPage = () => {
@@ -46,12 +46,10 @@ const PortfolioPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   <h3 className="text-2xl font-headline font-semibold text-white mb-1 shadow-text">{project.title}</h3>
                   <p className="text-sm text-gray-200 mb-3 shadow-text">{project.category}</p>
-                  {/* Optional: Lightbox modal on image click. For now, a link or button. */}
                   <Button variant="outline" size="sm" className="bg-white/20 border-white/50 text-white hover:bg-white/30 backdrop-blur-sm w-fit">
                     <Eye className="mr-2 h-4 w-4" /> View Details
                   </Button>
                 </div>
-                {/* Fallback visible content if hover layer is not enough */}
                 <CardFooter className="absolute bottom-0 left-0 right-0 bg-black/30 p-4 opacity-100 group-hover:opacity-0 transition-opacity duration-300 md:hidden">
                    <h3 className="text-lg font-headline font-semibold text-white">{project.title}</h3>
                 </CardFooter>

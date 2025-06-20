@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -35,12 +36,11 @@ const AboutPage = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://placehold.co/600x700.png"
+                src="/images/about/design-studio-moodboard.png"
                 alt="Inspiring interior design moodboard"
                 width={600}
                 height={700}
                 className="w-full h-auto object-cover"
-                data-ai-hint="design studio interior"
               />
             </div>
           </div>
@@ -62,12 +62,11 @@ const AboutPage = () => {
             </div>
             <div className="md:order-1 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://placehold.co/600x700.png"
+                src="/images/about/founder-eleonora-vance.png"
                 alt="Founder of AR Architecture Design Studio"
                 width={600}
                 height={700}
                 className="w-full h-auto object-cover"
-                data-ai-hint="designer portrait professional"
               />
             </div>
           </div>

@@ -1,5 +1,6 @@
+
 import Image from 'next/image';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'; // Added CardFooter
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -11,7 +12,6 @@ interface Testimonial {
   title: string;
   quote: string;
   imageUrl?: string;
-  imageHint?: string;
 }
 
 const testimonialsData: Testimonial[] = [
@@ -20,16 +20,14 @@ const testimonialsData: Testimonial[] = [
     name: 'Isabella Worthington',
     title: 'Owner, Park Avenue Penthouse',
     quote: "AR Architecture Design Studio transformed my apartment into a sanctuary of elegance and comfort. Their attention to detail and understanding of my vision was unparalleled. Every day feels like living in a masterpiece.",
-    imageUrl: 'https://placehold.co/100x100.png',
-    imageHint: 'elegant woman portrait',
+    imageUrl: '/images/testimonials/isabella-worthington.png',
   },
   {
     id: 2,
     name: 'Julian Sinclair',
     title: 'CEO, Sinclair Holdings',
     quote: "The team at AR Architecture Design Studio delivered a corporate headquarters that perfectly balances sophistication with functionality. Our clients and employees are consistently impressed. A truly professional and visionary firm.",
-    imageUrl: 'https://placehold.co/100x100.png',
-    imageHint: 'professional man portrait',
+    imageUrl: '/images/testimonials/julian-sinclair.png',
   },
   {
     id: 3,
@@ -43,8 +41,7 @@ const testimonialsData: Testimonial[] = [
     name: 'Chen Rui',
     title: 'Art Collector',
     quote: "AR Architecture Design Studio's ability to integrate my art collection seamlessly into the design was breathtaking. They created spaces that are both a home and a gallery, enhancing each piece's beauty. Exceptional talent.",
-    imageUrl: 'https://placehold.co/100x100.png',
-    imageHint: 'sophisticated person portrait',
+    imageUrl: '/images/testimonials/chen-rui.png',
   },
 ];
 
@@ -82,7 +79,6 @@ const TestimonialsPage = () => {
                         width={80}
                         height={80}
                         className="rounded-full object-cover"
-                        data-ai-hint={testimonial.imageHint || 'client portrait'}
                       />
                     )}
                     <div>
