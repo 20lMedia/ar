@@ -169,33 +169,17 @@ const AboutStudioSection = () => (
   </section>
 );
 
-const YourHomeReflectionSection = () => {
-  const services = [
-    { name: 'Commercial Service', image: '/images/home/service-commercial-office.jpg', aiHint: 'commercial office' },
-    { name: 'Retail Shop Design', image: '/images/home/service-retail-boutique.jpg', aiHint: 'retail boutique' },
-    { name: 'Home Office', image: '/images/home/service-home-office.jpg', aiHint: 'home office' },
-    { name: 'Salon Design', image: '/images/home/service-salon-luxury.jpg', aiHint: 'luxury salon' },
-  ];
+const WhyChooseUsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-background text-foreground">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-semibold">Your home, your reflection</h2>
-          <p className="text-base text-foreground/80">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-headline font-semibold mb-6">
+            Why Choose Us?
+          </h2>
+          <p className="text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed">
             We deliver exceptional interior design services for residential and commercial projects. Our team of experts ensures that every space we design is a perfect blend of aesthetics and functionality.
           </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => (
-            <Card key={service.name} className="bg-card text-card-foreground overflow-hidden group">
-              <div className="relative aspect-video">
-                <Image src={service.image} alt={service.name} layout="fill" objectFit="cover" data-ai-hint={service.aiHint} />
-              </div>
-              <CardContent className="p-4">
-                <h3 className="font-headline text-lg font-semibold">{service.name}</h3>
-              </CardContent>
-            </Card>
-          ))}
         </div>
       </div>
     </section>
@@ -386,7 +370,7 @@ export default function Home() {
       <NewHeroSection />
       <FeaturedServicesCarousel />
       <AboutStudioSection />
-      <YourHomeReflectionSection />
+      <WhyChooseUsSection />
       <FullWidthImageSection />
       <DesignProjectsSection />
       <ClientTestimonialsSection />
