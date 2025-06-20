@@ -3,8 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { ArrowRight, MoveRight } from 'lucide-react';
+import { ArrowRight, MoveRight, LayoutGrid, Briefcase, Users, Mail } from 'lucide-react';
 
 const NewHeroSection = () => (
   <section className="relative min-h-[70vh] md:min-h-[calc(100vh-4rem)] flex flex-col justify-center bg-gray-200">
@@ -59,6 +58,39 @@ const ResidentialServicesSection = () => (
   </section>
 );
 
+const AboutStudioSection = () => (
+  <section className="py-16 md:py-24 bg-secondary">
+    <div className="container mx-auto px-4">
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold text-primary mb-6 leading-tight">
+            Transforming Spaces with Visionary Design.
+          </h2>
+          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
+            Welcome to AR Architecture Design Studio. We believe that great design has the power to transform. With a rich history of innovation and a forward-thinking approach, we turn ambitious visions into inspiring realities.
+          </p>
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-md">
+            <Link href="/about">
+              Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+        <div className="rounded-lg overflow-hidden shadow-xl">
+          <div className="aspect-w-4 aspect-h-3"> {/* Use a div for aspect ratio if Image has layout fill */}
+            <Image
+              src="/images/home/about-studio-showcase.jpg"
+              alt="AR Architecture Design Studio - Modern architectural design"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const YourHomeReflectionSection = () => {
   const services = [
     { name: 'Commercial Service', image: '/images/home/service-commercial-office.jpg' },
@@ -67,11 +99,11 @@ const YourHomeReflectionSection = () => {
     { name: 'Salon Design', image: '/images/home/service-salon-luxury.jpg' },
   ];
   return (
-    <section className="py-16 md:py-24 bg-secondary text-secondary-foreground">
+    <section className="py-16 md:py-24 bg-background text-foreground">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
           <h2 className="text-3xl md:text-4xl font-headline font-semibold">Your home, your reflection</h2>
-          <p className="text-base text-secondary-foreground/80">
+          <p className="text-base text-foreground/80">
             We deliver exceptional interior design services for residential and commercial projects. Our team of experts ensures that every space we design is a perfect blend of aesthetics and functionality.
           </p>
         </div>
@@ -97,21 +129,6 @@ const FullWidthImageSection = () => (
     <div className="container mx-auto px-4">
       <div className="relative aspect-[16/7] rounded-lg overflow-hidden">
         <Image src="/images/home/fullwidth-panoramic-living.jpg" alt="Spacious modern living room" layout="fill" objectFit="cover" />
-      </div>
-    </div>
-  </section>
-);
-
-const ExploreProjectsSection = () => (
-  <section className="py-16 md:py-24 bg-background">
-    <div className="container mx-auto px-4">
-      <div className="grid md:grid-cols-2 gap-8 items-end">
-        <h2 className="text-3xl md:text-4xl font-headline font-semibold text-foreground">
-          Explore our selection of completed interior projects
-        </h2>
-        <p className="text-base text-foreground/80">
-          We are proud to share the visions that we have transformed into realities. Our projects showcase our commitment to excellence, creating unique and inspiring spaces.
-        </p>
       </div>
     </div>
   </section>
@@ -153,15 +170,53 @@ const ProjectShowcaseItem = ({
   </div>
 );
 
+const DiscoverOurStudioSection = () => {
+  const sections = [
+    { title: "Our Portfolio", description: "Explore our curated collection of inspiring projects.", href: "/portfolio", icon: LayoutGrid },
+    { title: "Design Services", description: "Discover the range of bespoke services we offer.", href: "/services", icon: Briefcase },
+    { title: "Client Stories", description: "Read what our valued clients have to say about us.", href: "/testimonials", icon: Users },
+    { title: "Get In Touch", description: "Start your design journey with a personal consultation.", href: "/contact", icon: Mail },
+  ];
+
+  return (
+    <section className="py-16 md:py-24 bg-secondary text-secondary-foreground">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary">Explore AR Architecture Studio</h2>
+          <p className="text-lg text-primary-foreground/80 mt-4 max-w-2xl mx-auto">
+            Delve deeper into our world of design, craftsmanship, and client success.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {sections.map((section) => (
+            <Link key={section.title} href={section.href} className="block group">
+              <Card className="bg-background text-foreground h-full flex flex-col items-center text-center p-6 hover:shadow-xl transition-shadow rounded-lg">
+                <div className="p-4 bg-accent/20 rounded-full mb-4 group-hover:bg-accent/30 transition-colors">
+                  <section.icon className="h-10 w-10 text-accent" />
+                </div>
+                <h3 className="text-xl font-headline font-semibold text-primary mb-2">{section.title}</h3>
+                <p className="text-sm text-foreground/70 flex-grow">{section.description}</p>
+                 <Button variant="link" size="sm" className="mt-4 text-accent group-hover:text-accent/80 p-0">
+                    Learn More <ArrowRight className="ml-1 h-3 w-3" />
+                  </Button>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 
 export default function Home() {
   return (
     <>
       <NewHeroSection />
       <ResidentialServicesSection />
+      <AboutStudioSection />
       <YourHomeReflectionSection />
       <FullWidthImageSection />
-      <ExploreProjectsSection />
       
       <ProjectShowcaseItem
         count="01"
@@ -177,15 +232,9 @@ export default function Home() {
         image1="/images/home/project-villa-luxury-1.jpg"
         image2="/images/home/project-villa-swimming-2.jpg"
       />
-
-      <div className="py-12 text-center bg-background">
-        <div className="container mx-auto px-4">
-            <Link href="/portfolio" className="text-lg font-medium text-foreground hover:text-accent inline-flex items-center group">
-                View more projects <MoveRight className="ml-2 h-5 w-5 text-accent transform transition-transform group-hover:translate-x-1" />
-            </Link>
-        </div>
-      </div>
-      
+      <DiscoverOurStudioSection />
     </>
   );
 }
+
+    
