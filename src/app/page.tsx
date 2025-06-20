@@ -15,6 +15,7 @@ const NewHeroSection = () => (
       objectFit="cover"
       className="absolute z-0 opacity-50"
       priority
+      data-ai-hint="modern interior"
     />
     <div className="relative z-10 container mx-auto px-4 py-16 text-left">
       <div className="max-w-2xl">
@@ -40,6 +41,7 @@ interface FeaturedServiceItem {
   imageUrl: string;
   imageAlt: string;
   href: string;
+  aiHint: string;
 }
 
 const featuredServices: FeaturedServiceItem[] = [
@@ -49,6 +51,7 @@ const featuredServices: FeaturedServiceItem[] = [
     imageUrl: '/images/home/carousel-residential-living.jpg',
     imageAlt: 'Luxurious residential living room design',
     href: '/services/residential',
+    aiHint: 'luxury living room'
   },
   {
     slug: 'commercial',
@@ -56,6 +59,7 @@ const featuredServices: FeaturedServiceItem[] = [
     imageUrl: '/images/home/carousel-commercial-lobby.jpg',
     imageAlt: 'Modern commercial office lobby design',
     href: '/services/commercial',
+    aiHint: 'commercial lobby'
   },
   {
     slug: 'styling',
@@ -63,6 +67,7 @@ const featuredServices: FeaturedServiceItem[] = [
     imageUrl: '/images/home/carousel-styling-detail.jpg',
     imageAlt: 'Interior styling detail with bespoke furniture',
     href: '/services/styling',
+    aiHint: 'furniture detail'
   },
   {
     slug: 'project-management',
@@ -70,6 +75,7 @@ const featuredServices: FeaturedServiceItem[] = [
     imageUrl: '/images/home/carousel-project-planning.jpg',
     imageAlt: 'Architectural blueprints for project management',
     href: '/services/project-management',
+    aiHint: 'architectural blueprints'
   },
 ];
 
@@ -103,6 +109,7 @@ const FeaturedServicesCarousel = () => (
                       layout="fill"
                       objectFit="cover"
                       className="group-hover:scale-105 transition-transform duration-300"
+                      data-ai-hint={service.aiHint}
                     />
                   </CardContent>
                   <div className="p-6 flex flex-col flex-grow">
@@ -135,11 +142,12 @@ const AboutStudioSection = () => (
         <div className="rounded-lg overflow-hidden shadow-xl">
           <div className="aspect-w-4 aspect-h-3">
             <Image
-              src="/images/home/about-studio-showcase.jpg"
+              src="https://source.unsplash.com/random/800x600/?architecture+studio+interior"
               alt="AR Architecture Design Studio - Modern architectural design"
               layout="fill"
               objectFit="cover"
               className="rounded-lg"
+              data-ai-hint="architecture interior"
             />
           </div>
         </div>
@@ -163,10 +171,10 @@ const AboutStudioSection = () => (
 
 const YourHomeReflectionSection = () => {
   const services = [
-    { name: 'Commercial Service', image: '/images/home/service-commercial-office.jpg' },
-    { name: 'Retail Shop Design', image: '/images/home/service-retail-boutique.jpg' },
-    { name: 'Home Office', image: '/images/home/service-home-office.jpg' },
-    { name: 'Salon Design', image: '/images/home/service-salon-luxury.jpg' },
+    { name: 'Commercial Service', image: '/images/home/service-commercial-office.jpg', aiHint: 'commercial office' },
+    { name: 'Retail Shop Design', image: '/images/home/service-retail-boutique.jpg', aiHint: 'retail boutique' },
+    { name: 'Home Office', image: '/images/home/service-home-office.jpg', aiHint: 'home office' },
+    { name: 'Salon Design', image: '/images/home/service-salon-luxury.jpg', aiHint: 'luxury salon' },
   ];
   return (
     <section className="py-16 md:py-24 bg-background text-foreground">
@@ -181,7 +189,7 @@ const YourHomeReflectionSection = () => {
           {services.map((service) => (
             <Card key={service.name} className="bg-card text-card-foreground overflow-hidden group">
               <div className="relative aspect-video">
-                <Image src={service.image} alt={service.name} layout="fill" objectFit="cover" />
+                <Image src={service.image} alt={service.name} layout="fill" objectFit="cover" data-ai-hint={service.aiHint} />
               </div>
               <CardContent className="p-4">
                 <h3 className="font-headline text-lg font-semibold">{service.name}</h3>
@@ -198,7 +206,13 @@ const FullWidthImageSection = () => (
   <section className="py-16 md:py-24">
     <div className="container mx-auto px-4">
       <div className="relative aspect-[16/7] rounded-lg overflow-hidden">
-        <Image src="/images/home/fullwidth-panoramic-living.jpg" alt="Spacious modern living room" layout="fill" objectFit="cover" />
+        <Image 
+          src="/images/home/fullwidth-panoramic-living.jpg" 
+          alt="Spacious modern living room" 
+          layout="fill" 
+          objectFit="cover" 
+          data-ai-hint="panoramic living room"
+        />
       </div>
     </div>
   </section>
@@ -209,14 +223,18 @@ const ProjectShowcaseItem = ({
   category,
   title,
   image1,
+  image1Hint,
   image2,
+  image2Hint,
   href = "/portfolio"
 }: {
   count: string;
   category: string;
   title: string;
   image1: string;
+  image1Hint: string;
   image2: string;
+  image2Hint: string;
   href?: string;
 }) => (
   <div className="py-12 border-b border-border last:border-b-0">
@@ -230,10 +248,10 @@ const ProjectShowcaseItem = ({
       <h3 className="text-2xl md:text-3xl font-headline font-semibold text-foreground mb-8">{title}</h3>
       <div className="grid md:grid-cols-2 gap-6">
         <div className="relative aspect-[4/3] rounded-md overflow-hidden">
-          <Image src={image1} alt={title + " - view 1"} layout="fill" objectFit="cover" />
+          <Image src={image1} alt={title + " - view 1"} layout="fill" objectFit="cover" data-ai-hint={image1Hint} />
         </div>
         <div className="relative aspect-[4/3] rounded-md overflow-hidden">
-          <Image src={image2} alt={title + " - view 2"} layout="fill" objectFit="cover" />
+          <Image src={image2} alt={title + " - view 2"} layout="fill" objectFit="cover" data-ai-hint={image2Hint} />
         </div>
       </div>
     </div>
@@ -255,15 +273,20 @@ export default function Home() {
         category="Apartment & Interior"
         title="Apartment & Interior Design and fitout"
         image1="/images/home/project-apartment-interior-1.jpg"
+        image1Hint="apartment interior"
         image2="/images/home/project-apartment-kitchen-2.jpg"
+        image2Hint="apartment kitchen"
       />
       <ProjectShowcaseItem
         count="02"
         category="Villa Interior"
         title="Villa Interior Design & Fitout"
         image1="/images/home/project-villa-luxury-1.jpg"
+        image1Hint="luxury villa"
         image2="/images/home/project-villa-swimming-2.jpg"
+        image2Hint="villa swimming pool"
       />
     </>
   );
 }
+
