@@ -55,7 +55,7 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="outline" size="sm" className="hidden md:inline-flex border-primary text-primary hover:bg-primary/5 hover:text-primary">
+          <Button asChild variant="outline" size="sm" className="hidden md:inline-flex">
             <Link href="/contact">Get a Quote</Link>
           </Button>
           <div className="md:hidden">
