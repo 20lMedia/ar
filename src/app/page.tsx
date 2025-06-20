@@ -142,7 +142,7 @@ const AboutStudioSection = () => (
         <div className="rounded-lg overflow-hidden shadow-xl">
           <div className="aspect-w-4 aspect-h-3">
             <Image
-              src="https://source.unsplash.com/random/800x600/?architecture+studio+interior"
+              src="https://images.unsplash.com/photo-1583329550487-0fa300a4cd1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnRlcmlvciUyMHxlbnwwfHx8fDE3NTA0MTAzMzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
               alt="AR Architecture Design Studio - Modern architectural design"
               layout="fill"
               objectFit="cover"
@@ -308,6 +308,8 @@ interface HomePageTestimonial {
   quote: string;
   name: string;
   role: string;
+  avatarUrl?: string;
+  avatarHint?: string;
 }
 
 const homePageTestimonials: HomePageTestimonial[] = [
@@ -371,3 +373,4 @@ export default function Home() {
     </>
   );
 }
+
