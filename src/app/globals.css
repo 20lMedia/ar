@@ -85,10 +85,15 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: 'PT Sans', sans-serif;
+    @apply bg-background text-foreground font-sans font-normal leading-relaxed tracking-normal text-base;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+  h1 {
+    @apply text-4xl font-black tracking-tight leading-tight sm:text-5xl;
+  }
+  h2 {
+    @apply text-2xl font-bold tracking-tight sm:text-3xl;
+  }
+  h3 {
+    @apply text-xl font-medium sm:text-2xl;
   }
 }
