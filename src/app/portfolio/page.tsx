@@ -6,13 +6,13 @@ import { Button } from '@/components/ui/button';
 import { Eye } from 'lucide-react';
 
 const projects = [
-  { id: 1, title: 'The Sky Residence', category: 'Residential', imageUrl: '/images/portfolio/py1.jpg', imageHeight: 800 },
-  { id: 2, title: 'Artisan Cafe & Lounge', category: 'Commercial', imageUrl: '/images/portfolio/py2.jpg', imageHeight: 600 },
-  { id: 3, title: 'Serenity Spa Retreat', category: 'Commercial', imageUrl: '/images/portfolio/py3.jpg', imageHeight: 700 },
-  { id: 4, title: 'Lakeside Manor', category: 'Residential', imageUrl: '/images/portfolio/py4.jpg', imageHeight: 850 },
-  { id: 5, title: 'Boutique Hotel Lobby', category: 'Commercial', imageUrl: '/images/portfolio/py5.jpg', imageHeight: 650 },
-  { id: 6, title: 'Urban Loft Conversion', category: 'Residential', imageUrl: '/images/portfolio/py6.jpg', imageHeight: 750 },
-  { id: 7, title: 'Executive Office Suite', category: 'Commercial', imageUrl: '/images/portfolio/py7.jpg', imageHeight: 550 },
+  { id: 1, title: 'The Sky Residence', category: 'Residential', imageUrl: '/py1.jpg', imageHeight: 800 },
+  { id: 2, title: 'Artisan Cafe & Lounge', category: 'Commercial', imageUrl: '/py2.jpg', imageHeight: 600 },
+  { id: 3, title: 'Serenity Spa Retreat', category: 'Commercial', imageUrl: '/py3.jpg', imageHeight: 700 },
+  { id: 4, title: 'Lakeside Manor', category: 'Residential', imageUrl: '/py4.jpg', imageHeight: 850 },
+  { id: 5, title: 'Boutique Hotel Lobby', category: 'Commercial', imageUrl: '/py5.jpg', imageHeight: 650 },
+  { id: 6, title: 'Urban Loft Conversion', category: 'Residential', imageUrl: '/py6.jpg', imageHeight: 750 },
+  { id: 7, title: 'Executive Office Suite', category: 'Commercial', imageUrl: '/py7.jpg', imageHeight: 550 },
   { id: 8, title: 'Vineyard Estate', category: 'Residential', imageUrl: '/images/portfolio/vineyard-estate.jpg', imageHeight: 900 },
   { id: 9, title: 'Gallery Space', category: 'Commercial', imageUrl: '/images/portfolio/gallery-space.jpg', imageHeight: 500 },
 ];
@@ -44,8 +44,8 @@ const PortfolioPage = () => {
                   className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <h3 className="text-2xl font-headline font-semibold text-white mb-1 shadow-text">{project.title}</h3>
-                  <p className="text-sm text-gray-200 mb-3 shadow-text">{project.category}</p>
+                  <h3 className="text-2xl font-headline font-semibold text-white mb-1">{project.title}</h3>
+                  <p className="text-sm text-gray-200 mb-3">{project.category}</p>
                   <Button variant="outline" size="sm" className="bg-white/20 border-white/50 text-white hover:bg-white/30 backdrop-blur-sm w-fit">
                     <Eye className="mr-2 h-4 w-4" /> View Details
                   </Button>
