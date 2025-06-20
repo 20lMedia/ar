@@ -13,7 +13,7 @@ const AboutPage = () => {
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">
             Our Story: Designing Dreams into Reality
           </h1>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-secondary-foreground/80 max-w-3xl mx-auto">
             Discover the passion, philosophy, and people behind AR Architecture Design Studio.
           </p>
         </div>
@@ -53,11 +53,11 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="md:order-2">
               <h2 className="text-3xl font-headline font-semibold text-primary mb-6">Meet the Founder</h2>
-              <p className="text-xl font-medium text-foreground/90 mb-4">Eleonora Vance, Principal Designer</p>
-              <p className="text-lg text-foreground/80 mb-4 leading-relaxed">
+              <p className="text-xl font-medium text-secondary-foreground/90 mb-4">Eleonora Vance, Principal Designer</p>
+              <p className="text-lg text-secondary-foreground/80 mb-4 leading-relaxed">
                 With over fifteen years of experience in luxury residential and commercial design, Eleonora brings a wealth of creativity, expertise, and an innate understanding of sophisticated living to every project. Her work is characterized by a refined aesthetic, a keen eye for detail, and a commitment to creating spaces that are both inspiring and deeply personal.
               </p>
-              <p className="text-lg text-foreground/80 leading-relaxed">
+              <p className="text-lg text-secondary-foreground/80 leading-relaxed">
                 Eleonora's designs have graced the pages of prestigious publications and have earned accolades for their innovative approach and timeless appeal. She believes that a well-designed space has the power to enhance well-being and elevate everyday life.
               </p>
             </div>
@@ -131,7 +131,7 @@ const AboutPage = () => {
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
             We invite you to explore the possibilities. Let's create something extraordinary together.
           </p>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-highlight hover:text-highlight-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
             <Link href="/contact">
               Contact Our Studio <ChevronRight className="ml-2 h-5 w-5" />
             </Link>

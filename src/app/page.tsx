@@ -39,7 +39,7 @@ const ResidentialServicesSection = () => (
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <h2 className="text-3xl md:text-4xl font-headline font-semibold text-foreground mb-4">Residential Services</h2>
-          <Link href="/services/residential" className="text-sm text-accent hover:text-accent/80 font-medium flex items-center">
+          <Link href="/services/residential" className="text-sm text-accent hover:text-highlight font-medium flex items-center">
             View <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>
@@ -66,17 +66,17 @@ const AboutStudioSection = () => (
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold text-primary mb-6 leading-tight">
             Transforming Spaces with Visionary Design.
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 leading-relaxed">
+          <p className="text-lg text-secondary-foreground/80 mb-8 leading-relaxed">
             Welcome to AR Architecture Design Studio. We believe that great design has the power to transform. With a rich history of innovation and a forward-thinking approach, we turn ambitious visions into inspiring realities.
           </p>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-md">
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-highlight hover:text-highlight-foreground rounded-md">
             <Link href="/about">
               Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </div>
         <div className="rounded-lg overflow-hidden shadow-xl">
-          <div className="aspect-w-4 aspect-h-3"> {/* Use a div for aspect ratio if Image has layout fill */}
+          <div className="aspect-w-4 aspect-h-3">
             <Image
               src="/images/home/about-studio-showcase.jpg"
               alt="AR Architecture Design Studio - Modern architectural design"
@@ -153,7 +153,7 @@ const ProjectShowcaseItem = ({
     <div className="container mx-auto px-4">
       <div className="flex justify-between items-center mb-4">
         <p className="text-sm text-foreground/70">{count} / {category.toUpperCase()}</p>
-        <Button variant="link" asChild className="text-accent hover:text-accent/80 p-0">
+        <Button variant="link" asChild className="text-accent hover:text-highlight p-0">
           <Link href={href}>View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
         </Button>
       </div>

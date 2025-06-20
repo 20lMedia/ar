@@ -38,7 +38,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.map(link => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm hover:text-accent transition-colors">
+                  <Link href={link.href} className="text-sm hover:text-highlight transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -55,11 +55,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 shrink-0 text-accent" />
-                <a href="mailto:contact@ararchitecturedesignstudio.com" className="hover:text-accent transition-colors">contact@ararchitecturedesignstudio.com</a>
+                <a href="mailto:contact@ararchitecturedesignstudio.com" className="hover:text-highlight transition-colors">contact@ararchitecturedesignstudio.com</a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 shrink-0 text-accent" />
-                <a href="tel:+919626111223" className="hover:text-accent transition-colors">+91 96261 11223</a>
+                <a href="tel:+919626111223" className="hover:text-highlight transition-colors">+91 96261 11223</a>
               </li>
             </ul>
           </div>
@@ -73,7 +73,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-foreground/70 hover:text-accent transition-colors"
+                  className="text-foreground/70 hover:text-highlight transition-colors"
                   aria-label={`Follow us on ${social.name}`}
                 >
                   <social.icon className="h-6 w-6" />
@@ -86,7 +86,7 @@ const Footer = () => {
         <div className="border-t border-border/40 pt-8 text-center text-sm">
           &copy; {currentYear} AR Architecture Design Studio. All rights reserved.
           <br />
-          <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link> | <Link href="/terms-of-service" className="hover:text-accent transition-colors">Terms of Service</Link>
+          <Link href="/privacy-policy" className="hover:text-highlight transition-colors">Privacy Policy</Link> | <Link href="/terms-of-service" className="hover:text-highlight transition-colors">Terms of Service</Link>
         </div>
       </div>
     </footer>

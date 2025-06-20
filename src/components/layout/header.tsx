@@ -11,9 +11,9 @@ import type { FC } from 'react';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/portfolio', label: 'Portfolio' }, // Changed from WORK
+  { href: '/portfolio', label: 'Portfolio' },
   { href: '/services', label: 'Services' },
-  { href: '/testimonials', label: 'Testimonials' }, // Changed from NEWS
+  { href: '/testimonials', label: 'Testimonials' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -32,8 +32,8 @@ const NavLink: FC<NavLinkProps> = ({ href, label, isMobile = false, onClose }) =
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium transition-colors hover:text-accent", // Changed hover to accent
-        isActive ? "text-primary font-semibold" : "text-foreground/70", // Keep primary for active, but use accent for hover
+        "text-sm font-medium transition-colors hover:text-highlight", 
+        isActive ? "text-primary font-semibold" : "text-foreground/70", 
         isMobile && "block py-2 text-lg"
       )}
       onClick={onClose}

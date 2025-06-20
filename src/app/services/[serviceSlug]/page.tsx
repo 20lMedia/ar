@@ -83,19 +83,19 @@ const ServiceDetailPage = ({ params }: { params: { serviceSlug: string } }) => {
 
   return (
     <div className="bg-background min-h-screen">
-      <header className="relative py-20 md:py-32 bg-slate-700 text-white">
+      <header className="relative py-20 md:py-32 bg-secondary text-secondary-foreground">
          <Image
           src={service.imageUrl}
           alt={service.title}
           layout="fill"
           objectFit="cover"
-          className="absolute z-0 opacity-50"
+          className="absolute z-0 opacity-30" 
         />
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-black/20 z-10"></div> {/* Reduced opacity for overlay */}
         <div className="container mx-auto px-4 relative z-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4 shadow-text">{service.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-primary-foreground drop-shadow-md">{service.title}</h1>
           <nav aria-label="breadcrumb">
-            <ol className="flex justify-center space-x-2 text-sm">
+            <ol className="flex justify-center space-x-2 text-sm text-primary-foreground/90">
               <li><Link href="/services" className="hover:underline">Services</Link></li>
               <li><span aria-hidden="true">/</span></li>
               <li className="font-medium" aria-current="page">{service.title}</li>
@@ -127,15 +127,15 @@ const ServiceDetailPage = ({ params }: { params: { serviceSlug: string } }) => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-secondary text-center">
+      <section className="py-16 md:py-24 bg-primary text-primary-foreground text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary mb-6">
+          <h2 className="text-3xl md:text-4xl font-headline font-semibold text-primary-foreground mb-6">
             Interested in {service.title}?
           </h2>
-          <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Let's discuss how our expertise can bring unparalleled sophistication to your project.
           </p>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
+          <Button asChild size="lg" className="bg-accent hover:bg-highlight hover:text-highlight-foreground text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
             <Link href="/contact">
               Request a Consultation <ChevronRight className="ml-2 h-5 w-5" />
             </Link>

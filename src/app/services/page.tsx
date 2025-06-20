@@ -65,7 +65,7 @@ const ServicesPage = () => {
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">
             Our Bespoke Design Services
           </h1>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-secondary-foreground/80 max-w-3xl mx-auto">
             Tailored solutions to transform your vision into an exquisitely designed reality.
           </p>
         </div>
@@ -77,7 +77,7 @@ const ServicesPage = () => {
             {servicesData.map((service) => (
               <Card key={service.id} className="flex flex-col shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1 rounded-lg">
                 <CardHeader className="flex flex-row items-center space-x-4 p-6">
-                  <div className="p-3 bg-accent/20 rounded-full">
+                  <div className="p-3 bg-accent/10 rounded-full"> {/* Slightly adjusted icon bg for new palette */}
                     <service.icon className="h-8 w-8 text-accent" />
                   </div>
                   <CardTitle className="font-headline text-2xl text-primary">{service.title}</CardTitle>
@@ -88,7 +88,7 @@ const ServicesPage = () => {
                   </CardDescription>
                 </CardContent>
                 <div className="p-6 pt-0">
-                   <Button variant="link" asChild className="p-0 text-accent hover:text-accent/80 font-semibold">
+                   <Button variant="link" asChild className="p-0 text-accent hover:text-highlight font-semibold">
                     <Link href={service.href}>Learn More <ChevronRight className="ml-1 h-4 w-4" /></Link>
                   </Button>
                 </div>
@@ -106,7 +106,7 @@ const ServicesPage = () => {
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
             Schedule a discovery call to discuss your project and learn how AR Architecture Design Studio can bring your aspirations to life.
           </p>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
+          <Button asChild size="lg" className="bg-accent hover:bg-highlight hover:text-highlight-foreground text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
             <Link href="/contact">
               Schedule a Discovery Call <ChevronRight className="ml-2 h-5 w-5" />
             </Link>

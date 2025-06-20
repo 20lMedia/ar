@@ -15,7 +15,7 @@ const ContactPage = () => {
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">
             Connect With Us
           </h1>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-secondary-foreground/80 max-w-3xl mx-auto">
             We're here to answer your questions and help you embark on your design journey. Reach out to AR Architecture Design Studio today.
           </p>
         </div>
@@ -128,7 +128,7 @@ const ContactPage = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors p-2 bg-secondary rounded-full hover:bg-accent/20"
+                        className="text-muted-foreground hover:text-primary transition-colors p-2 bg-secondary rounded-full hover:bg-highlight/20"
                         aria-label={`Follow us on ${social.name}`}
                       >
                         <social.icon className="h-6 w-6" />

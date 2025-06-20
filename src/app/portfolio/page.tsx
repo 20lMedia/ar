@@ -25,7 +25,7 @@ const PortfolioPage = () => {
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">
             Our Curated Portfolio
           </h1>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-secondary-foreground/80 max-w-3xl mx-auto">
             A glimpse into the diverse and luxurious spaces we've meticulously crafted for our discerning clientele.
           </p>
         </div>
@@ -67,7 +67,7 @@ const PortfolioPage = () => {
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
             Let's discuss how we can bring your unique vision to life.
           </p>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
+          <Button asChild size="lg" className="bg-accent hover:bg-highlight hover:text-highlight-foreground text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
             <Link href="/contact">
               Start Your Project
             </Link>

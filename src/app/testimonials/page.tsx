@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardFooter } from '@/components/ui/card'; // Ensured CardFooter is imported
 import { Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -53,7 +53,7 @@ const TestimonialsPage = () => {
           <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary mb-4">
             Words of Acclaim
           </h1>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-secondary-foreground/80 max-w-3xl mx-auto">
             Hear from our esteemed clients about their experience with AR Architecture Design Studio.
           </p>
         </div>
@@ -101,7 +101,7 @@ const TestimonialsPage = () => {
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
             We are eager to learn about your design aspirations and how we can assist you in creating your ideal space.
           </p>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
+          <Button asChild size="lg" className="bg-accent hover:bg-highlight hover:text-highlight-foreground text-accent-foreground font-semibold py-3 px-8 text-lg rounded-md shadow-lg transition-transform hover:scale-105">
             <Link href="/contact">
               Get In Touch <ChevronRight className="ml-2 h-5 w-5" />
             </Link>
