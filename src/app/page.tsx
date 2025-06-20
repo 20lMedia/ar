@@ -343,14 +343,6 @@ const ClientTestimonialsSection = () => (
               "{testimonial.quote}"
             </p>
             <div className="flex items-center space-x-3">
-              <Image
-                src={testimonial.avatarUrl}
-                alt={testimonial.name}
-                width={48} 
-                height={48}
-                className="rounded-full"
-                data-ai-hint={testimonial.avatarHint}
-              />
               <div>
                 <p className="font-semibold text-primary">{testimonial.name}</p>
                 <p className="text-sm text-secondary-foreground/70">{testimonial.role}</p>
