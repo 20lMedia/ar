@@ -6,13 +6,13 @@ import { Button } from '@/components/ui/button';
 import { Eye } from 'lucide-react';
 
 const projects = [
-  { id: 1, title: 'The Sky Residence', category: 'Residential', imageUrl: '/images/portfolio/sky-residence.jpg', imageHeight: 800 },
-  { id: 2, title: 'Artisan Cafe & Lounge', category: 'Commercial', imageUrl: '/images/portfolio/artisan-cafe.jpg', imageHeight: 600 },
-  { id: 3, title: 'Serenity Spa Retreat', category: 'Commercial', imageUrl: '/images/portfolio/serenity-spa.jpg', imageHeight: 700 },
-  { id: 4, title: 'Lakeside Manor', category: 'Residential', imageUrl: '/images/portfolio/lakeside-manor.jpg', imageHeight: 850 },
-  { id: 5, title: 'Boutique Hotel Lobby', category: 'Commercial', imageUrl: '/images/portfolio/boutique-hotel-lobby.jpg', imageHeight: 650 },
-  { id: 6, title: 'Urban Loft Conversion', category: 'Residential', imageUrl: '/images/portfolio/urban-loft-conversion.jpg', imageHeight: 750 },
-  { id: 7, title: 'Executive Office Suite', category: 'Commercial', imageUrl: '/images/portfolio/executive-office-suite.jpg', imageHeight: 550 },
+  { id: 1, title: 'The Sky Residence', category: 'Residential', imageUrl: '/images/portfolio/py1.jpg', imageHeight: 800 },
+  { id: 2, title: 'Artisan Cafe & Lounge', category: 'Commercial', imageUrl: '/images/portfolio/py2.jpg', imageHeight: 600 },
+  { id: 3, title: 'Serenity Spa Retreat', category: 'Commercial', imageUrl: '/images/portfolio/py3.jpg', imageHeight: 700 },
+  { id: 4, title: 'Lakeside Manor', category: 'Residential', imageUrl: '/images/portfolio/py4.jpg', imageHeight: 850 },
+  { id: 5, title: 'Boutique Hotel Lobby', category: 'Commercial', imageUrl: '/images/portfolio/py5.jpg', imageHeight: 650 },
+  { id: 6, title: 'Urban Loft Conversion', category: 'Residential', imageUrl: '/images/portfolio/py6.jpg', imageHeight: 750 },
+  { id: 7, title: 'Executive Office Suite', category: 'Commercial', imageUrl: '/images/portfolio/py7.jpg', imageHeight: 550 },
   { id: 8, title: 'Vineyard Estate', category: 'Residential', imageUrl: '/images/portfolio/vineyard-estate.jpg', imageHeight: 900 },
   { id: 9, title: 'Gallery Space', category: 'Commercial', imageUrl: '/images/portfolio/gallery-space.jpg', imageHeight: 500 },
 ];
