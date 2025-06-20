@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, PenTool, Lightbulb, Award, Users } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 
 const NewHeroSection = () => (
@@ -167,6 +167,29 @@ const AboutStudioSection = () => (
   </section>
 );
 
+const whyChooseUsFeatures = [
+  {
+    icon: PenTool,
+    title: 'Tailored Design Solutions',
+    description: 'We craft spaces that uniquely reflect your personality and lifestyle.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Innovative & Functional',
+    description: 'Balancing cutting-edge aesthetics with practical living.',
+  },
+  {
+    icon: Award,
+    title: 'Quality & Precision',
+    description: 'Meticulous attention to detail and high-quality finishes.',
+  },
+  {
+    icon: Users,
+    title: 'Collaborative Partnership',
+    description: 'Your vision is our guide through a transparent process.',
+  },
+];
+
 const WhyChooseUsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-background text-foreground">
@@ -178,6 +201,30 @@ const WhyChooseUsSection = () => {
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed">
             We deliver exceptional interior design services for residential and commercial projects. Our team of experts ensures that every space we design is a perfect blend of aesthetics and functionality.
           </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-x-12 gap-y-10 mb-12">
+          {whyChooseUsFeatures.map((feature, index) => (
+            <div key={index} className="flex items-start space-x-4">
+              <div className="flex-shrink-0">
+                <div className="bg-accent/10 text-accent p-3 rounded-full">
+                  <feature.icon className="h-6 w-6" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-headline font-semibold text-primary mb-1">{feature.title}</h3>
+                <p className="text-foreground/70">{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-highlight hover:text-highlight-foreground rounded-md">
+            <Link href="/contact">
+              Request a Consultation <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
@@ -306,8 +353,6 @@ interface HomePageTestimonial {
   quote: string;
   name: string;
   role: string;
-  avatarUrl?: string;
-  avatarHint?: string;
 }
 
 const homePageTestimonials: HomePageTestimonial[] = [
@@ -316,24 +361,18 @@ const homePageTestimonials: HomePageTestimonial[] = [
     quote: "The design team exceeded my expectations. Elegant, sturdy, and incredibly comfortable!",
     name: "Michael L.",
     role: "Verified Buyer",
-    avatarUrl: "https://images.unsplash.com/photo-1573496527892-904f897eb744?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzUwNDE0NzkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    avatarHint: "professional portrait"
   },
   {
     id: 2,
     quote: "Love the craftsmanship. I get compliments every time someone visits my home.",
     name: "Rachel M.",
     role: "Homeowner",
-    avatarUrl: "https://images.unsplash.com/photo-1661758408961-c5fd2eaf3b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGlmZXN0eWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzUwNDE0NzkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    avatarHint: "lifestyle portrait"
   },
   {
     id: 3,
     quote: "Fast delivery and the quality is top-notch. Definitely recommending AR Studio again.",
     name: "Tom S.",
     role: "Interior Designer",
-    avatarUrl: "https://images.unsplash.com/photo-1614139767414-f9011dff53bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjcmVhdGl2ZSUyMGhlYWRzaG90fGVufDB8fHx8MTc1MDQxNDc5M3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    avatarHint: "creative headshot"
   },
 ];
 
