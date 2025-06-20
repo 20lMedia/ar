@@ -218,45 +218,92 @@ const FullWidthImageSection = () => (
   </section>
 );
 
-const ProjectShowcaseItem = ({
-  count,
-  category,
-  title,
-  image1,
-  image1Hint,
-  image2,
-  image2Hint,
-  href = "/portfolio"
-}: {
-  count: string;
-  category: string;
-  title: string;
-  image1: string;
-  image1Hint: string;
-  image2: string;
-  image2Hint: string;
-  href?: string;
-}) => (
-  <div className="py-12 border-b border-border last:border-b-0">
-    <div className="container mx-auto px-4">
-      <div className="flex justify-between items-center mb-4">
-        <p className="text-sm text-foreground/70">{count} / {category.toUpperCase()}</p>
-        <Button variant="link" asChild className="text-accent hover:text-highlight p-0">
-          <Link href={href}>View More <ArrowRight className="ml-1 h-4 w-4" /></Link>
-        </Button>
-      </div>
-      <h3 className="text-2xl md:text-3xl font-headline font-semibold text-foreground mb-8">{title}</h3>
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="relative aspect-[4/3] rounded-md overflow-hidden">
-          <Image src={image1} alt={title + " - view 1"} layout="fill" objectFit="cover" data-ai-hint={image1Hint} />
+const homePageProjects = [
+  {
+    id: '01',
+    name: 'Modern Apartment',
+    imageUrl: '/images/home/project-carousel-apartment.jpg',
+    imageHint: 'modern apartment',
+    href: '/portfolio/project-1',
+  },
+  {
+    id: '02',
+    name: 'Scandinavian Villa',
+    imageUrl: '/images/home/project-carousel-villa.jpg',
+    imageHint: 'scandinavian villa interior',
+    href: '/portfolio/project-2',
+  },
+  {
+    id: '03',
+    name: 'Urban Loft Conversion',
+    imageUrl: '/images/home/project-carousel-loft.jpg',
+    imageHint: 'urban loft living',
+    href: '/portfolio/project-3',
+  },
+  {
+    id: '04',
+    name: 'Minimalist Office',
+    imageUrl: '/images/home/project-carousel-office.jpg',
+    imageHint: 'minimalist office design',
+    href: '/portfolio/project-4',
+  },
+];
+
+const DesignProjectsSection = () => {
+  return (
+    <section className="py-16 md:py-24 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-headline font-semibold text-foreground mb-2">
+            Selected Projects
+          </h2>
+          <p className="text-lg text-foreground/70 max-w-2xl">
+            A glimpse into our diverse portfolio of inspiring spaces, where design meets functionality.
+          </p>
         </div>
-        <div className="relative aspect-[4/3] rounded-md overflow-hidden">
-          <Image src={image2} alt={title + " - view 2"} layout="fill" objectFit="cover" data-ai-hint={image2Hint} />
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
+            {homePageProjects.map((project) => (
+              <CarouselItem key={project.id} className="pl-4 md:basis-1/2 lg:basis-1/3 group">
+                <Link href={project.href} className="block h-full">
+                  <Card className="relative aspect-[3/4] overflow-hidden h-full border-0 shadow-none rounded-lg">
+                    <Image
+                      src={project.imageUrl}
+                      alt={project.name}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-300 group-hover:scale-105"
+                      data-ai-hint={project.imageHint}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent " />
+                    <CardContent className="absolute bottom-0 left-0 right-0 p-4 md:p-6 text-white z-10">
+                      <div className="flex justify-between items-end">
+                        <div>
+                          <p className="text-base font-semibold">{project.id}. {project.name}</p>
+                        </div>
+                        <div className="bg-white/20 hover:bg-white/30 transition-colors rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm border border-white/30">
+                          <ArrowRight className="h-5 w-5 text-white" />
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          {/* Optional: Add CarouselPrevious/Next if global navigation is desired */}
+          {/* <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 z-10 hidden md:flex" /> */}
+          {/* <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 z-10 hidden md:flex" /> */}
+        </Carousel>
       </div>
-    </div>
-  </div>
-);
+    </section>
+  );
+};
 
 
 export default function Home() {
@@ -267,26 +314,7 @@ export default function Home() {
       <AboutStudioSection />
       <YourHomeReflectionSection />
       <FullWidthImageSection />
-      
-      <ProjectShowcaseItem
-        count="01"
-        category="Apartment & Interior"
-        title="Apartment & Interior Design and fitout"
-        image1="/images/home/project-apartment-interior-1.jpg"
-        image1Hint="apartment interior"
-        image2="/images/home/project-apartment-kitchen-2.jpg"
-        image2Hint="apartment kitchen"
-      />
-      <ProjectShowcaseItem
-        count="02"
-        category="Villa Interior"
-        title="Villa Interior Design & Fitout"
-        image1="/images/home/project-villa-luxury-1.jpg"
-        image1Hint="luxury villa"
-        image2="/images/home/project-villa-swimming-2.jpg"
-        image2Hint="villa swimming pool"
-      />
+      <DesignProjectsSection />
     </>
   );
 }
-
