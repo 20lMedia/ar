@@ -17,7 +17,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
-      // Removed placehold.co and source.unsplash.com as they are no longer used
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };
